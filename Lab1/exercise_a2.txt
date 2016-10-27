@@ -1,0 +1,110 @@
+
+Starting Nmap 7.01 ( https://nmap.org ) at 2016-10-27 12:48 CEST
+Nmap scan report for 10.0.1.2
+Host is up (0.0048s latency).
+Not shown: 997 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+80/tcp  open  http
+443/tcp open  https
+
+Nmap scan report for 10.0.1.30
+Host is up (0.0051s latency).
+Not shown: 992 filtered ports
+PORT    STATE  SERVICE
+20/tcp  closed ftp-data
+21/tcp  open   ftp
+22/tcp  open   ssh
+25/tcp  open   smtp
+80/tcp  open   http
+110/tcp open   pop3
+143/tcp open   imap
+443/tcp closed https
+
+Nmap scan report for 10.0.1.35
+Host is up (0.0061s latency).
+Not shown: 996 closed ports
+PORT    STATE SERVICE
+21/tcp  open  ftp
+22/tcp  open  ssh
+80/tcp  open  http
+631/tcp open  ipp
+
+Nmap scan report for 10.0.1.41
+Host is up (0.0062s latency).
+Not shown: 996 closed ports
+PORT      STATE SERVICE
+21/tcp    open  ftp
+22/tcp    open  ssh
+631/tcp   open  ipp
+13782/tcp open  netbackup
+
+Nmap scan report for 10.0.1.50
+Host is up (0.0059s latency).
+Not shown: 994 closed ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+53/tcp   open  domain
+111/tcp  open  rpcbind
+2121/tcp open  ccproxy-ftp
+4444/tcp open  krb524
+6667/tcp open  irc
+
+Nmap scan report for 10.0.1.55
+Host is up (0.0056s latency).
+Not shown: 999 closed ports
+PORT     STATE SERVICE
+2121/tcp open  ccproxy-ftp
+
+Nmap scan report for 10.0.1.60
+Host is up (0.0060s latency).
+Not shown: 997 closed ports
+PORT     STATE SERVICE
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+1099/tcp open  rmiregistry
+
+Nmap scan report for 10.0.1.65
+Host is up (0.0059s latency).
+Not shown: 991 closed ports
+PORT      STATE SERVICE
+135/tcp   open  msrpc
+139/tcp   open  netbios-ssn
+445/tcp   open  microsoft-ds
+49152/tcp open  unknown
+49153/tcp open  unknown
+49154/tcp open  unknown
+49155/tcp open  unknown
+49156/tcp open  unknown
+49157/tcp open  unknown
+
+Nmap scan report for 10.0.1.70
+Host is up (0.0059s latency).
+Not shown: 995 closed ports
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+1025/tcp open  NFS-or-IIS
+1027/tcp open  IIS
+
+Nmap scan report for 10.0.1.100
+Host is up (0.0067s latency).
+Not shown: 994 closed ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+80/tcp   open  http
+111/tcp  open  rpcbind
+443/tcp  open  https
+631/tcp  open  ipp
+3306/tcp open  mysql
+
+Nmap scan report for 10.0.1.103
+Host is up (0.0055s latency).
+Not shown: 997 closed ports
+PORT     STATE SERVICE
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+2121/tcp open  ccproxy-ftp
+
+Nmap done: 256 IP addresses (11 hosts up) scanned in 19.61 seconds

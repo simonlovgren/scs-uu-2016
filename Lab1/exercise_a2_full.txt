@@ -1,0 +1,336 @@
+\begin{verbatim}
+# nmap 10.0.1.1-254
+
+Starting Nmap 7.01 ( https://nmap.org ) at 2016-10-27 21:37 CEST
+Nmap scan report for 10.0.1.2
+Host is up (0.011s latency).
+Not shown: 997 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+80/tcp  open  http
+443/tcp open  https
+
+Nmap scan report for 10.0.1.30
+Host is up (0.0074s latency).
+Not shown: 992 filtered ports
+PORT    STATE  SERVICE
+20/tcp  closed ftp-data
+21/tcp  open   ftp
+22/tcp  open   ssh
+25/tcp  open   smtp
+80/tcp  open   http
+110/tcp open   pop3
+143/tcp open   imap
+443/tcp closed https
+
+Nmap scan report for 10.0.1.35
+Host is up (0.010s latency).
+Not shown: 996 closed ports
+PORT    STATE SERVICE
+21/tcp  open  ftp
+22/tcp  open  ssh
+80/tcp  open  http
+631/tcp open  ipp
+
+Nmap scan report for 10.0.1.41
+Host is up (0.011s latency).
+Not shown: 996 closed ports
+PORT      STATE SERVICE
+21/tcp    open  ftp
+22/tcp    open  ssh
+631/tcp   open  ipp
+13782/tcp open  netbackup
+
+Nmap scan report for 10.0.1.50
+Host is up (0.011s latency).
+Not shown: 994 closed ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+53/tcp   open  domain
+111/tcp  open  rpcbind
+2121/tcp open  ccproxy-ftp
+4444/tcp open  krb524
+6667/tcp open  irc
+
+Nmap scan report for 10.0.1.55
+Host is up (0.011s latency).
+Not shown: 999 closed ports
+PORT     STATE SERVICE
+2121/tcp open  ccproxy-ftp
+
+Nmap scan report for 10.0.1.60
+Host is up (0.011s latency).
+Not shown: 997 closed ports
+PORT     STATE SERVICE
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+1099/tcp open  rmiregistry
+
+Nmap scan report for 10.0.1.65
+Host is up (0.011s latency).
+Not shown: 991 closed ports
+PORT      STATE SERVICE
+135/tcp   open  msrpc
+139/tcp   open  netbios-ssn
+445/tcp   open  microsoft-ds
+49152/tcp open  unknown
+49153/tcp open  unknown
+49154/tcp open  unknown
+49155/tcp open  unknown
+49156/tcp open  unknown
+49157/tcp open  unknown
+
+Nmap scan report for 10.0.1.70
+Host is up (0.011s latency).
+Not shown: 995 closed ports
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+1025/tcp open  NFS-or-IIS
+1027/tcp open  IIS
+
+Nmap scan report for 10.0.1.100
+Host is up (0.010s latency).
+Not shown: 994 closed ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+80/tcp   open  http
+111/tcp  open  rpcbind
+443/tcp  open  https
+631/tcp  open  ipp
+3306/tcp open  mysql
+
+Nmap scan report for 10.0.1.103
+Host is up (0.0093s latency).
+Not shown: 997 closed ports
+PORT     STATE SERVICE
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+2121/tcp open  ccproxy-ftp
+
+Nmap done: 254 IP addresses (11 hosts up) scanned in 21.38 seconds
+~~~~~~~~~~~~~~~~SEP~~~~~~~~~~~~~~~~
+# nmap 10.0.1.1-254 > scan.txt
+~~~~~~~~~~~~~~~~SEP~~~~~~~~~~~~~~~~
+# cat scan.txt
+
+Starting Nmap 7.01 ( https://nmap.org ) at 2016-10-27 21:37 CEST
+Nmap scan report for 10.0.1.2
+Host is up (0.0088s latency).
+Not shown: 997 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+80/tcp  open  http
+443/tcp open  https
+
+Nmap scan report for 10.0.1.30
+Host is up (0.010s latency).
+Not shown: 992 filtered ports
+PORT    STATE  SERVICE
+20/tcp  closed ftp-data
+21/tcp  open   ftp
+22/tcp  open   ssh
+25/tcp  open   smtp
+80/tcp  open   http
+110/tcp open   pop3
+143/tcp open   imap
+443/tcp closed https
+
+Nmap scan report for 10.0.1.35
+Host is up (0.010s latency).
+Not shown: 996 closed ports
+PORT    STATE SERVICE
+21/tcp  open  ftp
+22/tcp  open  ssh
+80/tcp  open  http
+631/tcp open  ipp
+
+Nmap scan report for 10.0.1.41
+Host is up (0.010s latency).
+Not shown: 996 closed ports
+PORT      STATE SERVICE
+21/tcp    open  ftp
+22/tcp    open  ssh
+631/tcp   open  ipp
+13782/tcp open  netbackup
+
+Nmap scan report for 10.0.1.50
+Host is up (0.0080s latency).
+Not shown: 994 closed ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+53/tcp   open  domain
+111/tcp  open  rpcbind
+2121/tcp open  ccproxy-ftp
+4444/tcp open  krb524
+6667/tcp open  irc
+
+Nmap scan report for 10.0.1.55
+Host is up (0.0096s latency).
+Not shown: 999 closed ports
+PORT     STATE SERVICE
+2121/tcp open  ccproxy-ftp
+
+Nmap scan report for 10.0.1.60
+Host is up (0.0094s latency).
+Not shown: 997 closed ports
+PORT     STATE SERVICE
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+1099/tcp open  rmiregistry
+
+Nmap scan report for 10.0.1.65
+Host is up (0.0084s latency).
+Not shown: 991 closed ports
+PORT      STATE SERVICE
+135/tcp   open  msrpc
+139/tcp   open  netbios-ssn
+445/tcp   open  microsoft-ds
+49152/tcp open  unknown
+49153/tcp open  unknown
+49154/tcp open  unknown
+49155/tcp open  unknown
+49156/tcp open  unknown
+49157/tcp open  unknown
+
+Nmap scan report for 10.0.1.70
+Host is up (0.0091s latency).
+Not shown: 995 closed ports
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+1025/tcp open  NFS-or-IIS
+1027/tcp open  IIS
+
+Nmap scan report for 10.0.1.100
+Host is up (0.011s latency).
+Not shown: 994 closed ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+80/tcp   open  http
+111/tcp  open  rpcbind
+443/tcp  open  https
+631/tcp  open  ipp
+3306/tcp open  mysql
+
+Nmap scan report for 10.0.1.103
+Host is up (0.0099s latency).
+Not shown: 997 closed ports
+PORT     STATE SERVICE
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+2121/tcp open  ccproxy-ftp
+
+Nmap done: 254 IP addresses (11 hosts up) scanned in 21.51 seconds
+\end{verbatim}
+\begin{verbatim}
+# cat scan.txt | grep "report"
+Nmap scan report for 10.0.1.2
+Nmap scan report for 10.0.1.30
+Nmap scan report for 10.0.1.35
+Nmap scan report for 10.0.1.41
+Nmap scan report for 10.0.1.50
+Nmap scan report for 10.0.1.55
+Nmap scan report for 10.0.1.60
+Nmap scan report for 10.0.1.65
+Nmap scan report for 10.0.1.70
+Nmap scan report for 10.0.1.100
+Nmap scan report for 10.0.1.103
+\end{verbatim}
+\begin{verbatim}
+# cat scan.txt | grep "report" | cut -d " " -f 5
+10.0.1.2
+10.0.1.30
+10.0.1.35
+10.0.1.41
+10.0.1.50
+10.0.1.55
+10.0.1.60
+10.0.1.65
+10.0.1.70
+10.0.1.100
+10.0.1.103
+\end{verbatim}
+\begin{verbatim}
+# cat scan.txt | grep "report" | cut -d " " -f 5 | sort
+10.0.1.100
+10.0.1.103
+10.0.1.2
+10.0.1.30
+10.0.1.35
+10.0.1.41
+10.0.1.50
+10.0.1.55
+10.0.1.60
+10.0.1.65
+10.0.1.70
+\end{verbatim}
+\begin{verbatim}
+# cat scan.txt | grep "report\|open" | cut -d " " -f 5
+\end{verbatim}
+\begin{verbatim}
+# cat scan.txt | grep "report\|open" | cut -d "/" -f 1 | cut -d "r" -f 4 | cut -d " " -f 2
+10.0.1.2
+22
+80
+443
+10.0.1.30
+21
+22
+25
+80
+110
+143
+10.0.1.35
+21
+22
+80
+631
+10.0.1.41
+21
+22
+631
+13782
+10.0.1.50
+22
+53
+111
+2121
+4444
+6667
+10.0.1.55
+2121
+10.0.1.60
+139
+445
+1099
+10.0.1.65
+135
+139
+445
+49152
+49153
+49154
+49155
+49156
+49157
+10.0.1.70
+135
+139
+445
+1025
+1027
+10.0.1.100
+22
+80
+111
+443
+631
+3306
+10.0.1.103
+139
+445
+2121
+\end{verbatim}
