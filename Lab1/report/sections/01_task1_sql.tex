@@ -1,0 +1,58 @@
+% EVERY SECTION FILE SHOULD BE NAMED NN_sectionname.tex
+% where NN is order number with leading zeros
+%
+% 00_introduction.tex is reserved for the intro-text of the whole report. 
+
+% Name of section is start of new part of assignment
+\section{SQL}
+\texttt{SQL}, or \textit{Sequential Query Language}, is a language \dots
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Example statements}
+
+\subsubsection{Functioning SQL statements}
+Using the SQL Tryit Editor\footnote{http://www.w3schools.com/sql/trysql.asp?filename=trysql\_select\_all}
+by w3schools \dots
+
+\textbf{Create a list of customers and their contact person}
+\begin{lstlisting}
+SELECT CustomerName, ContactName
+FROM Customers
+WHERE ContactName IS NOT NULL
+ORDER BY ContactName DESC
+LIMIT 0,5
+\end{lstlisting}
+
+\textbf{Extract all suppliers who carry more than 4 products}
+\begin{lstlisting}
+SELECT SupplierName, COUNT(DISTINCT ProductID) AS NumberOfProducts
+FROM Suppliers s
+LEFT JOIN Products p
+  ON s.SupplierID = p.SupplierID
+GROUP BY SupplierName
+HAVING NumberOfProducts > 4
+LIMIT 0,5
+\end{lstlisting}
+
+
+\subsubsection{Non-Functioning SQL statements}
+\textbf{Select a random number of customers (at probability 0.5) from the
+  database}
+\textit{Error 1: could not prepare statement (1 not authorized to use function: random)}
+\begin{lstlisting}
+SELECT *
+FROM Customers
+WHERE RANDOM() > 0.5
+ORDER BY CustomerName
+\end{lstlisting}
+
+\textbf{Select all customers that have placed at least 5 orders}
+\textit{Error 1: could not prepare statement (1 misuse of aggregate function COUNT())}
+\begin{lstlisting}
+SELECT DISTINCT *
+FROM Customers c
+LEFT JOIN Orders o
+ON c.CustomerID = o.CustomerID
+  WHERE COUNT(*) > 4
+GROUP BY c.CustomerID 
+\end{lstlisting}

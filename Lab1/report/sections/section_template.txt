@@ -1,0 +1,12 @@
+% EVERY SECTION FILE SHOULD BE NAMED NN_sectionname.tex
+% where NN is order number with leading zeros
+%
+% 00_introduction.tex is reserved for the intro-text of the whole report. 
+
+% Name of section is start of new part of assignment
+\section{Assignment part name (ex. insertion sort)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Some subsection}
+
+
