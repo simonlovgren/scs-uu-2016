@@ -1,26 +1,33 @@
 #!/usr/bin/env bash
 
-# If first argument is not zero (empty)
+# Check if first argument is not zero (empty)
 if ! [ -z $1 ]; then
-    # If file in argument 1 exists
+    # Chech if file in argument 1 exists
     if [ -f $1 ]; then
-        # Loop for each row in file, extracting each row to the variable
-        # name
+        # Loop for each row in file, extracting each
+        # row to a variable called name
         for name in $(cat $1); do
-            # Resolve IP address of each host
+            # Resolve IP address of each host by calling
+            # the progam 'host', supplying the hostname
+            # extracted from the supplied file
             host $name
             # Print delimiter (newline)
             echo ""
         done
     else
         # Argument given, but file does not exist
+        # Print error message and usage.
         echo "[$1] does not exist."
         echo "Please select an existing file"
-        exit 1 # Exit with error value
+        echo "Usage: $(basename $0) [file]"
+        # Exit with error (value != 0)
+        exit 1
     fi
 else
-    # Missing argument, print 'usage'
+    # Missing argument, print error message
+    # and usage of script
     echo "Missing argument"
     echo "Usage: $(basename $0) [file]"
-    exit 1 # Exit with error value
+    # Exit with error (value != 0)
+    exit 1
 fi

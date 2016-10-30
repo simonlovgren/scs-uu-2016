@@ -4,18 +4,54 @@
 % 00_introduction.tex is reserved for the intro-text of the whole report. 
 
 % Name of section is start of new part of assignment
-\section{SQL}
-\texttt{SQL}, or \textit{Sequential Query Language}, is a language \dots
+\section{Task 1: SQL}
+\texttt{SQL}, or \textit{Structured Query Language}, is a language designed for
+managing data stored in relational database systems. SQL exists under many names,
+some which have extended the SQL with further functionality, such as MySQL, MSSQL,
+SQLite or WebSQL.
+
+Relational database systems are popular and their use wide-spread -- many websites
+use a relational database system based on SQL to store all data shown- and handled
+by the website. One of the reasons SQL is important in the field of information
+security is that the vulnerability known as SQL injection, SQLi for short, is still
+one of the most popular vulnerabilities to exploit\cite{MOTHBRDSQL}. This even though
+the vulnerabilty was disclosed more than 15 years ago.
+
+In this task, four examples of SQL statements (also referred to as SQL queries or queries)
+-- that is queries written in SQL form to be processed by a SQL server of some kind --
+are explained, of which two function correctly and two are erroneous.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Example statements}
 
-\subsubsection{Functioning SQL statements}
-Using the SQL Tryit Editor\footnote{http://www.w3schools.com/sql/trysql.asp?filename=trysql\_select\_all}
-by w3schools \dots
+The examples are written for WebSQL, a client-side database\cite{W3CWEBSQL}
+(for example a web browser), which is based on the dialect of SQLite 3\cite{W3CWEBSQL}.
+The SQL Tryit Editor\footnote{http://www.w3schools.com/sql/trysql.asp?filename=trysql\_select\_all}
+by w3schools can be used to test SQL queries against the WebSQL interface.
 
-\textbf{Create a list of customers and their contact person}
-\begin{lstlisting}
+\subsubsection{Part A: Functioning SQL statements}
+The following SQL statements are fully functional (non erroneous) when processed
+by a WebSQL database. 
+
+\paragraph{Create a list of customers and their contact person}
+
+This SQL query is designed to work with a database that contains a table
+called \textbf{Customers}, in which there are two columns called
+\textbf{CustomerName} and \textbf{ContactName}. This can be derived
+from the first two rows of the statement; it \texttt{SELECT}s the
+columns \textbf{CustomerName} and \textbf{ContactName} \texttt{FROM}
+the table \textbf{Customers}.
+
+The query also filters the results so that only rows \texttt{WHERE}
+\textbf{CustomerName} has been set is included, in other words where
+\textbf{CustomerName} \texttt{IS NOT NULL}\footnote{\texttt{NULL} in SQL is a
+  value denoting not knowing the actual value in the selected row and column}.
+It then sorts the results on \textbf{ContactName} in \texttt{DESC}ending order,
+as denoted by the \texttt{ORDER BY} clause. Lastly it returns at most five (5)
+results, where \texttt{LIMIT 0,5} denotes only five rows starting from row 0
+should be returned.
+
+\begin{lstlisting}[caption={Query for retreiving the name of five customers and their contact person},label={sqlstatement1}]
 SELECT CustomerName, ContactName
 FROM Customers
 WHERE ContactName IS NOT NULL
@@ -23,32 +59,89 @@ ORDER BY ContactName DESC
 LIMIT 0,5
 \end{lstlisting}
 
-\textbf{Extract all suppliers who carry more than 4 products}
-\begin{lstlisting}
+\begin{table}[h]
+  \centering
+  \begin{tabular}{ | l | l | }
+    \hline
+    \textbf{CustomerName} & \textbf{ContactName} \\
+    \hline
+    Wolski & Zbyszek  \\
+    \hline
+    Océano Atlántico Ltda. & Yvonne Moncada \\
+    \hline
+    Laughing Bacchus Wine Cellars & Yoshi Tannamuri \\
+    \hline
+    Hungry Coyote Import Store & Yoshi Latimer \\
+    \hline
+    Chop-suey Chinese & Yang Wang \\
+    \hline
+  \end{tabular}
+  \caption{Result from SQL query in Listing \ref{sqlstatement1}}
+  \label{table:sql1}
+\end{table}
+
+
+\paragraph{Extract all suppliers who carry more than 4 products}
+For this query, only concepts not explained in the prior query will be
+explained in detail.
+
+This SQL query is designed to work with a database that contains a table
+called \textbf{Suppliers} and a table called \textbf{Products}. In the
+\texttt{SELECT}-row of the query, an aggregate value, \texttt{COUNT} can be
+seen. An aggregate value is a value calculated during the retreival of the
+result-set. In this case \texttt{COUNT} counts the number of unique
+values in the column \textbf{ProductID}. What makes the query only count
+the unique values (eg. a set of $\{1,2,2,3\} would count only three unique
+values$) is the keyword \texttt{DISTINCT}. This aggregate value is then
+aliased (given a name) \textbf{NumberOfProducts} for ease-of-use as well
+as recognisability.
+
+
+
+
+\begin{lstlisting}[caption={SQL Query to retreive all suppliers carrying more
+      than four products.},label={sqlstatement2}]
 SELECT SupplierName, COUNT(DISTINCT ProductID) AS NumberOfProducts
 FROM Suppliers s
 LEFT JOIN Products p
   ON s.SupplierID = p.SupplierID
 GROUP BY SupplierName
 HAVING NumberOfProducts > 4
-LIMIT 0,5
 \end{lstlisting}
 
+\begin{table}[h]
+  \centering
+  \begin{tabular}{ | l | l | }
+    \hline
+    \textbf{SupplierName} & \textbf{NumberOfProducts} \\
+    \hline
+    Pavlova, Ltd. & 5  \\
+    \hline
+    Plutzer Lebensmittelgro{\ss}märkte AG & 5 \\
+    \hline
+  \end{tabular}
+  \caption{Result from SQL query in Listing \ref{sqlstatement2}}
+  \label{table:sql2}
+\end{table}
 
-\subsubsection{Non-Functioning SQL statements}
-\textbf{Select a random number of customers (at probability 0.5) from the
+\subsubsection{Part B: Non-Functioning SQL statements}
+The following SQL statements are erroneous when processed by a WebSQL database.
+The first statement, however, would be correct if processed by a SQLite 3+
+database -- which will be made clear later.
+
+\paragraph{Select a random number of customers (at probability 0.5) from the
   database}
 \textit{Error 1: could not prepare statement (1 not authorized to use function: random)}
-\begin{lstlisting}
+\begin{lstlisting}[label={sqlstatement3}]
 SELECT *
 FROM Customers
 WHERE RANDOM() > 0.5
 ORDER BY CustomerName
 \end{lstlisting}
 
-\textbf{Select all customers that have placed at least 5 orders}
+\paragraph{Select all customers that have placed at least 5 orders}
 \textit{Error 1: could not prepare statement (1 misuse of aggregate function COUNT())}
-\begin{lstlisting}
+\begin{lstlisting}[label={sqlstatement4}]
 SELECT DISTINCT *
 FROM Customers c
 LEFT JOIN Orders o

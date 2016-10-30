@@ -6,19 +6,22 @@ SID = silo4625
 ASSIGNMENT_DIR = $(shell pwd | rev | cut -d / -f 2 | rev)
 YEAR = $(shell date "+%Y")
 
-.PHONY: all, report,  inputs, clean, latex, bibtex
+.PHONY: all, report,  inputs, clean, latex, bibtex, prebib
 
 all: report
 
 report: inputs
 	@echo "Attempting to compile to PDF..."
-	@$(MAKE) latex
+	@$(MAKE) prebib
 	@$(MAKE) bibtex
 	@$(MAKE) latex
 	@$(MAKE) latex
 	@echo 'OK'
 	mv $@.pdf $(SID)_$(ASSIGNMENT_DIR)_$(COURSE)_$(YEAR).pdf
 	@echo 'Done'
+
+prebib:
+	latexmk report.tex
 
 latex:
 	latexmk -pdf -pdflatex="$(TEX)" report.tex

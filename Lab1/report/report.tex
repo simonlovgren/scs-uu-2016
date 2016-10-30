@@ -1,8 +1,8 @@
 \documentclass[a4paper,11pt]{article}
 \usepackage{fullpage}
 \usepackage[british]{babel}
-\usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -11,7 +11,7 @@
 \usepackage{float}
 \usepackage{listings}
 \lstset{% parameters for all code listings
-	language=SQL,
+        language=SQL,
 	frame=single,
 	basicstyle=\small,  % nothing smaller than \footnotesize, please
 	tabsize=2,
@@ -23,12 +23,23 @@
 	prebreak={/},
 	captionpos=b,
 	columns=fullflexible,
-	escapeinside={\#*}{\^^M},
-	mathescape
+	%escapeinside={\#*}{\^^M},
+	%mathescape
 }
+
 \usepackage{multirow}
 \usepackage{tikz} \usetikzlibrary{trees}
 \usepackage{hyperref}  % should always be the last package
+
+% Set paragraph headings as subsubsubtitles
+\usepackage{titlesec}
+
+\setcounter{secnumdepth}{3}
+
+\titleformat{\paragraph}
+            {\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+            \titlespacing*{\paragraph}
+            {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
 % useful colours (use sparingly!):
 \newcommand{\blue}[1]{{\color{blue}#1}}
@@ -68,9 +79,9 @@
 %\newcommand{\tick}{\ding{51}}
 %\newcommand{\notick}{\ding{55}}
 
-\title{\textbf{Secure Computer Systems (course 1DT072) \\
-    Uppsala University -- Autumn 2016 \\
-    Report for LAB $1$}}
+\title{\textbf{Introductory Lab \\
+    Secure Computer Systems [1DT072]} \\[1em]
+\large{Uppsala University -- Autumn 2016}}
 
 \author{Simon Lövgren}
 
