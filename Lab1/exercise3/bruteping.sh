@@ -7,7 +7,7 @@ IP_NUM='[0-9]{1,3}'
 IP_NOR="$IP_NUM(-$IP_NUM)?"
 # Regex-pattern to Match an IP Address (ex. 123.123.123.123) or
 # IP Range (ex. 12-13.14-15.145-178.1-5)
-IP_PATTERN="^$IP_NOR\.$IP_NOR\.$IP_NOR\.$IP_NOR$"
+nIP_PATTERN="^$IP_NOR\.$IP_NOR\.$IP_NOR\.$IP_NOR$"
 
 
 # Functions can be used to divide the script into
@@ -60,7 +60,9 @@ if ! [ -z $1 ]; then
                     for p4 in $(name_or_range $1 4); do
                         # Ping selected IP addresses (this is what
                         # we came here to do!)
-                        ping -c 1 "$p1.$p2.$p3.$p4"
+                        # Grep lines with responses and cut the
+                        # IP from each line.
+                        ping -c 1 "$p1.$p2.$p3.$p4" | grep "bytes from" | cut -d " " -f 4 | cut -d ":" -f 1
                     done
                 done
             done

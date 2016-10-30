@@ -10,9 +10,13 @@ if ! [ -z $1 ]; then
             # Resolve IP address of each host by calling
             # the progam 'host', supplying the hostname
             # extracted from the supplied file
-            host $name
-            # Print delimiter (newline)
-            echo ""
+            #
+            # Grep all lines with an address, reverse as address
+            # is always last, but IPv6 lines has one more word.
+            # Cut with delimiter as whitestpace and extract first
+            # field, then (re-)reverse the text. Lastly sort for
+            # unique IP:s
+            host $name | grep address | rev | cut -d " " -f 1 | rev
         done
     else
         # Argument given, but file does not exist
