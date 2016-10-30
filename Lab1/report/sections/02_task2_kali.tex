@@ -1,13 +1,30 @@
 % Name of section is start of new part of assignment
 \section{Taks 2: Kali Linux and an introduction to Pentesting}
-\texttt{Kali Linux} is a Linux-distribution based on the destribution
-called Debian\cite{KALIDEBIAN} \dots
+This seciton follows the exercises \textit{Bash Line Commands \& Shell
+  Scripting} from Dans Courses\cite{DANSCOURSES} using Kali Linux\footnote{
+  \texttt{Kali Linux} is a Linux-distribution, based on the destribution
+called Debian\cite{KALIDEBIAN}, geared towards penetretion testng and
+information security.
+}.
+
+Note that in all of the command-line snippets below, the rows with
+a leading \texttt{\#} is input and the other rows are the resulting
+output (if not stated otherwise).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Exercises}
-\subsubsection{Part A: Exercise 1 - Scan a network}
-\paragraph{Part A1: IP-range 192.168.56.1-254}
-\begin{lstlisting}[numbers=none, language={}, frame=bt]
+\subsection{Part A: Exercise 1 - Scan a network}
+This exercise is aimed towards scanning a network using the
+\texttt{nmap} tool. Each of the steps in the exercise will
+be briefly explained.
+
+\subsubsection{Part A1: IP-range 192.168.56.1-254}
+\label{sec:parta1}
+First, \texttt{nmap} is used to scan the network for live
+hosts and to scan the live hosts for open ports. Here
+the IP-range 192.168.56.1, 192.168.56.2, \dots 192.168.56.254
+is scanned.
+
+\begin{lstlisting}[numbers=none, language={}, frame=single, framexleftmargin={0.2em}]
 # nmap 192.168.56.1-254
 
 Starting Nmap 7.01 ( https://nmap.org ) at 2016-10-27 20:01 CEST
@@ -32,11 +49,18 @@ PORT     STATE SERVICE
 Nmap done: 254 IP addresses (3 hosts up) scanned in 16.36 seconds
 \end{lstlisting}
 
-\begin{lstlisting}[numbers=none, language={}, frame=bt]
+To not have to scan the network every time the result is processed,
+it can be written to a file. In this case the result is written
+to the file \texttt{exercise\_a1.txt}.
+
+\begin{lstlisting}[numbers=none, language={}, frame=single, framexleftmargin={0.2em}]
 # nmap 192.168.56.1-254 > exercise_a1.txt
 \end{lstlisting}
 
-\begin{lstlisting}[numbers=none, language={}, frame=bt]
+To read the contents of a file, the command \texttt{cat} can be used.
+It simply prints the contents of a file.
+
+\begin{lstlisting}[numbers=none, language={}, frame=single, framexleftmargin={0.2em}]
 # cat exercise_a1.txt
 
 Starting Nmap 7.01 ( https://nmap.org ) at 2016-10-27 20:01 CEST
@@ -61,28 +85,48 @@ PORT     STATE SERVICE
 Nmap done: 254 IP addresses (3 hosts up) scanned in 16.36 seconds
 \end{lstlisting}
 
-\begin{lstlisting}[numbers=none, language={}, frame=bt]
+To filter rows containing specific keywords, \texttt{grep} can be used.
+In this case a simple keyword is used (report), but depending on implementation
+\texttt{grep} can be used with extended regular expressions for powerful
+filtration of text and data.
+
+\begin{lstlisting}[numbers=none, language={}, frame=single, framexleftmargin={0.2em}]
 # cat exercise_a1.txt | grep report
 Nmap scan report for 192.168.56.1
 Nmap scan report for 192.168.56.100
 Nmap scan report for 192.168.56.102
 \end{lstlisting}
 
-\begin{lstlisting}[numbers=none, language={}, frame=bt]
+To extract a specific part of each line returned by grep, the
+\texttt{cut} is used. In this case, cut is used to split each
+line by a delimiting character (here whitespace) and from the
+resulting split, the fifth field is extracted.
+
+\begin{lstlisting}[numbers=none, language={}, frame=single, framexleftmargin={0.2em}]
 cat exercise_a1.txt | grep report | cut -d " " -f 5
 192.168.56.1
 192.168.56.100
 192.168.56.102
 \end{lstlisting}
 
-\begin{lstlisting}[numbers=none, language={}, frame=bt]
+If the results are unordered, they can be sorted using the command
+\texttt{sort}. This command is also capable of removing duplicate
+rows, which can be useful for extracting lists containing unique
+entries (for example a list of IP addresses).
+
+\begin{lstlisting}[numbers=none, language={}, frame=single, framexleftmargin={0.2em}]
 cat exercise_a1.txt | grep report | cut -d " " -f 5 | sort
 192.168.56.1
 192.168.56.100
 192.168.56.102
 \end{lstlisting}
 
-\begin{lstlisting}[numbers=none, language={}, frame=bt]
+These commands can then be used to filter- and cut data of multiple
+types. In this exaple, grep matches either \textit{report} or \textit{open}.
+cut is then used to, in a systematic way, split each returned row and extract
+only the IP-address and open ports of each host on the network.
+
+\begin{lstlisting}[numbers=none, language={}, frame=single, framexleftmargin={0.2em}]
 cat exercise_a1.txt | grep "report\|open" | cut -d "/" -f1 | cut -d "r" -f 4 | cut -d " " -f2                                              
 192.168.56.1
 80
@@ -91,9 +135,16 @@ cat exercise_a1.txt | grep "report\|open" | cut -d "/" -f1 | cut -d "r" -f 4 | c
 3000
 \end{lstlisting}
 
-\paragraph{Part A2: IP-range 10.0.1.1-254}
+\subsubsection{Part A2: IP-range 10.0.1.1-254}
+This exercise is analogous to the exercise described in section \ref{sec:parta1},
+as it is the same exercise repeated with another IP-range/network containing
+more hosts than the network scanned in section \ref{sec:parta1}. Thus the steps in
+this section will be even briefer.
 
-\begin{lstlisting}[numbers=none, language={}, frame=bt]
+The network is scanned using \texttt{nmap} to see whether any hosts are
+live and reachable.
+
+\begin{lstlisting}[numbers=none, language={}, frame=single, framexleftmargin={0.2em}]
 # nmap 10.0.1.1-254
 
 Starting Nmap 7.01 ( https://nmap.org ) at 2016-10-27 21:37 CEST
@@ -206,10 +257,17 @@ PORT     STATE SERVICE
 
 Nmap done: 254 IP addresses (11 hosts up) scanned in 21.38 seconds
 \end{lstlisting}
-\begin{lstlisting}[numbers=none, language={}, frame=bt]
+
+The scan is repeated, but the result is stored in a file
+(\texttt{scan.txt}) for faster processing.
+
+\begin{lstlisting}[numbers=none, language={}, frame=single, framexleftmargin={0.2em}]
 # nmap 10.0.1.1-254 > scan.txt
 \end{lstlisting}
-\begin{lstlisting}[numbers=none, language={}, frame=bt]
+
+With cat, the contents of the file is verified.
+
+\begin{lstlisting}[numbers=none, language={}, frame=single, framexleftmargin={0.2em}]
 # cat scan.txt
 
 Starting Nmap 7.01 ( https://nmap.org ) at 2016-10-27 21:37 CEST
@@ -322,7 +380,11 @@ PORT     STATE SERVICE
 
 Nmap done: 254 IP addresses (11 hosts up) scanned in 21.51 seconds
 \end{lstlisting}
-\begin{lstlisting}[numbers=none, language={}, frame=bt]
+
+Using \texttt{grep} the same way as in section \ref{sec:parta1}, the
+IP-addresses of the results can be found within the file.
+
+\begin{lstlisting}[numbers=none, language={}, frame=single, framexleftmargin={0.2em}]
 # cat scan.txt | grep "report"
 Nmap scan report for 10.0.1.2
 Nmap scan report for 10.0.1.30
@@ -336,7 +398,11 @@ Nmap scan report for 10.0.1.70
 Nmap scan report for 10.0.1.100
 Nmap scan report for 10.0.1.103
 \end{lstlisting}
-\begin{lstlisting}[numbers=none, language={}, frame=bt]
+
+And using \texttt{cut}, only the IP-addresses are extracted from each
+line.
+
+\begin{lstlisting}[numbers=none, language={}, frame=single, framexleftmargin={0.2em}]
 # cat scan.txt | grep "report" | cut -d " " -f 5
 10.0.1.2
 10.0.1.30
@@ -350,7 +416,12 @@ Nmap scan report for 10.0.1.103
 10.0.1.100
 10.0.1.103
 \end{lstlisting}
-\begin{lstlisting}[numbers=none, language={}, frame=bt]
+
+Using sort, the IP-addresses are sorted. In this case, note that
+addresses 10.0.1.100 and 10.0.1.103 are sorted before 10.0.1.2 as
+the leading digit of the last segment is one.
+
+\begin{lstlisting}[numbers=none, language={}, frame=single, framexleftmargin={0.2em}]
 # cat scan.txt | grep "report" | cut -d " " -f 5 | sort
 10.0.1.100
 10.0.1.103
@@ -364,10 +435,12 @@ Nmap scan report for 10.0.1.103
 10.0.1.65
 10.0.1.70
 \end{lstlisting}
-\begin{lstlisting}[numbers=none, language={}, frame=bt]
-# cat scan.txt | grep "report\|open" | cut -d " " -f 5
-\end{lstlisting}
-\begin{lstlisting}[numbers=none, language={}, frame=bt]
+
+Here \texttt{grep} is used to filter lines containing the keyword
+\textit{report} or \texttt{open}. Cut is then systematically used
+to extract only IP-addresses and open port numbers.
+
+\begin{lstlisting}[numbers=none, language={}, frame=single, framexleftmargin={0.2em}]
 # cat scan.txt | grep "report\|open" | cut -d "/" -f 1 | cut -d "r" -f 4 | cut -d " " -f 2
 10.0.1.2
 22
@@ -432,18 +505,36 @@ Nmap scan report for 10.0.1.103
 2121
 \end{lstlisting}
 
-\subsubsection{Part B: Exercise 2 - Sort and filter subdomains \& servers}
-\begin{lstlisting}[numbers=none, language={}, frame=bt]
+\subsection{Part B: Exercise 2 - Sort and filter subdomains \& servers}
+\label{sec:yahoo}
+In this exercise a more extensive source is used for \texttt{grep}ing
+and \texttt{cut}ting text, namely the frontpage of yahoo.com.
+
+Note, however, that a lot has happened to the website (and source code)
+since the exercises were written (last update in september 2013\cite{DANSCOURSES}).
+Thus the results of the commands do not fully match the ones in the exercise.
+
+Some characters have also been removed from the source code, as they are incompatible
+with the encoding- and display of this report.
+
+First \texttt{wget} is used to download the source of the website's homepage. It is
+stored as index.html.
+
+\begin{lstlisting}[numbers=none, language={}, frame=single, framexleftmargin={0.2em}]
 # wget "http://yahoo.com"
 \end{lstlisting}
 
-\begin{lstlisting}[numbers=none, language={}, frame=bt]
+\texttt{cat} is used to verify the contents of the file. The output of the
+command has been moved to attachments, as it is rather extensive.
+\begin{lstlisting}[numbers=none, language={}, frame=single, framexleftmargin={0.2em}]
 # cat index.html | grep "yahoo.com"
 
-(For output, see attachment \ref{att:yahooindex})
+[output]\ref{att:yahooindex}
 \end{lstlisting}
 
-\begin{lstlisting}[numbers=none, language={}, frame=bt]
+\texttt{grep} is used to filter all rows containing the string \textit{yahoo.com}.
+
+\begin{lstlisting}[numbers=none, language={}, frame=single, framexleftmargin={0.2em}]
 # cat index.html | grep "yahoo.com" | cut -d ":" -f 2
     <title>Yahoo</title><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="//s.yimg.com"><link rel="preconnect" href="//s.yimg.com"><link rel="dns-prefetch" href="//y.analytics.yahoo.com"><link rel="preconnect" href="//y.analytics.yahoo.com"><link rel="dns-prefetch" href="//geo.query.yahoo.com"><link rel="preconnect" href="//geo.query.yahoo.com"><link rel="dns-prefetch" href="//csc.beap.bc.yahoo.com"><link rel="preconnect" href="//csc.beap.bc.yahoo.com"><link rel="dns-prefetch" href="//geo.yahoo.com"><link rel="preconnect" href="//geo.yahoo.com"><link rel="dns-prefetch" href="//comet.yahoo.com"><link rel="preconnect" href="//comet.yahoo.com"><link rel="dns-prefetch" href="//video-api.yql.yahoo.com"><link rel="preconnect" href="//video-api.yql.yahoo.com"><link rel="dns-prefetch" href="//yrtas.btrll.com"><link rel="preconnect" href="//yrtas.btrll.com"><link rel="dns-prefetch" href="//shim.btrll.com"><link rel="preconnect" href="//shim.btrll.com">    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 url" content="http
@@ -489,7 +580,10 @@ uh;src
             <!-- Via https/1.1 media-router-fp8.prod.media.ir2.yahoo.com[BC7D50F2] (YahooTrafficServer) -->
 59
 \end{lstlisting}
-\begin{lstlisting}[numbers=none, language={}, frame=bt]
+
+The result is further refined by using \texttt{cut} another time.
+
+\begin{lstlisting}[numbers=none, language={}, frame=single, framexleftmargin={0.2em}]
 # cat index.html | grep "yahoo.com" | cut -d ":" -f 2 |  cut -d "/" -f 3
 
 url" content="http
@@ -535,7 +629,10 @@ sb.scorecardresearch.com
 
 59
 \end{lstlisting}
-\begin{lstlisting}[numbers=none, language={}, frame=bt]
+
+Then sort is used with the \texttt{-u}-flag, which only returns unique rows.
+
+\begin{lstlisting}[numbers=none, language={}, frame=single, framexleftmargin={0.2em}]
 # cat index.html | grep "yahoo.com" | cut -d ":" -f 2 |  cut -d "/" -f 3 | sort -u
 
 0,"usePE"
@@ -566,7 +663,7 @@ uk.news.yahoo.com
 url" content="http
 www.yahoo.com
 \end{lstlisting}
-\begin{lstlisting}[numbers=none, language={}, frame=bt]
+\begin{lstlisting}[numbers=none, language={}, frame=single, framexleftmargin={0.2em}]
 # cat index.html | grep "yahoo.com" | cut -d ":" -f 2 |  cut -d "/" -f 3 | sort -u | cut -d "\"" -f 1
 
 0,
@@ -597,10 +694,19 @@ uk.news.yahoo.com
 url
 www.yahoo.com
 \end{lstlisting}
-\begin{lstlisting}[numbers=none, language={}, frame=bt]
+
+To continue processing the file, the current output is stored to
+a file as the current command is rather long.
+
+\begin{lstlisting}[numbers=none, language={}, frame=single, framexleftmargin={0.2em}]
 # cat index.html | grep "yahoo.com" | cut -d ":" -f 2 |  cut -d "/" -f 3 | sort -u | cut -d "\"" -f 1 > domains.txt
 \end{lstlisting}
-\begin{lstlisting}[numbers=none, language={}, frame=bt]
+
+The new file, \texttt{domains.txt}, is further processed as to
+extract only domains- and subdomains to yahoo.com using grep
+and sort.
+
+\begin{lstlisting}[numbers=none, language={}, frame=single, framexleftmargin={0.2em}]
 # cat domains.txt | sort -u | grep "yahoo.com"
 answers.yahoo.com
 info.yahoo.com
@@ -615,12 +721,15 @@ uk.eurosport.yahoo.com
 uk.news.yahoo.com
 www.yahoo.com
 \end{lstlisting}
-\begin{lstlisting}[numbers=none, language={}, frame=bt]
-# cat domains.txt | sort -u | grep "yahoo.com" > domains.txt
+
+The result is then stored in a text file.
+
+\begin{lstlisting}[numbers=none, language={}, frame=single, framexleftmargin={0.2em}]
+# cat domains.txt | sort -u | grep "yahoo.com" > domains2.txt
 \end{lstlisting}
 
 \pagebreak
-\subsubsection{Part C: Exercise 3 - Bash scripts}
+\subsection{Part C: Exercise 3 - Bash scripts}
 Exercise 3 targets writing bash shell-scripts to automate otherwise tedious
 tasks, such as resolving IP-addresses from multiple hostnames or pinging a
 wide range of IP-addresses.
@@ -640,25 +749,34 @@ to be executed using, for example, \texttt{chmod +x myfile.sh}.
 To execute the shell-script while in the same folder, one types
 \texttt{./myscipt.sh}. However, if the script file has been placed in one of the
 binary folders\footnote{\texttt{/bin}, \texttt{/usr/local/bin}, \texttt{\textasciitilde/bin}
-  or alike, depending on system.}, then the script can be called from anywhere only
-using its name (\texttt{myscript.sh} in this example).
+  or alike, depending on system.}, then the, script can be called from anywhere only
+using its name (\texttt{myscript.sh} i, geared towards penetretion testng and
+information security.
 
 Below are the two shell-scripts, fully commented for every line as to
 clearly describe exactly what the script does.
 
-\paragraph{Bash script: Resolving hosts from file}
+\subsubsection{Bash script: Resolving hosts from file}
 \texttt{ips.sh} is a script that reads hostnames line-by-line from a plain text file,
 passing them one-by-one to the command \texttt{host} which resolves the IP-address of
 a host. The file is supplied as an argument when calling the script, thus it is not
 limited to a specific file.
 
-If the script is called without a filename as argument, it will print an error-text
-as well as how the script is used. This is also true if the script is called with
+If the script is called without a filename ,as argument, it will print an error-text
+as well as how the script is used. Thi, geared towards penetretion testng and
+information security.
 the name of a non-existing file.
 
 \lstinputlisting[language=bash, caption = \texttt{ips.sh}]{../exercise3/ips.sh}
 
-\paragraph{Bash script: Ping IP-range}
+The resulting output of running the script with the file \texttt{domains2.txt}
+generated in section \ref{sec:yahoo} is the following:
+
+\begin{lstlisting}[numbers=none, language={}, frame=single, framexleftmargin={0.2em}]
+
+\end{lstlisting}
+
+\subsubsection{Bash script: Ping IP-range}
 \texttt{bruteping.sh} is a script that takes an IP-address or IP-range as an
 argument and then (sequentially) pings each address. It verifies the format of the
 argument using regular expressions to match an IP address. \textbf{Note, however,
@@ -668,3 +786,9 @@ As with \texttt{ips.sh}, \texttt{bruteping.sh} prints an error-message and how t
 is used if the argument is invalid or none has been provided.
 
 \lstinputlisting[language=bash, caption = \texttt{bruteping.sh}]{../exercise3/bruteping.sh}
+
+This is what we get if we execute the script:
+
+\begin{lstlisting}[numbers=none, language={}, frame=single, framexleftmargin={0.2em}]
+
+\end{lstlisting}

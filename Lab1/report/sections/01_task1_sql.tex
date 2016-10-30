@@ -35,22 +35,6 @@ by a WebSQL database.
 
 \paragraph{Create a list of customers and their contact person}
 
-This SQL query is designed to work with a database that contains a table
-called \textbf{Customers}, in which there are two columns called
-\textbf{CustomerName} and \textbf{ContactName}. This can be derived
-from the first two rows of the statement; it \texttt{SELECT}s the
-columns \textbf{CustomerName} and \textbf{ContactName} \texttt{FROM}
-the table \textbf{Customers}.
-
-The query also filters the results so that only rows \texttt{WHERE}
-\textbf{CustomerName} has been set is included, in other words where
-\textbf{CustomerName} \texttt{IS NOT NULL}\footnote{\texttt{NULL} in SQL is a
-  value denoting not knowing the actual value in the selected row and column}.
-It then sorts the results on \textbf{ContactName} in \texttt{DESC}ending order,
-as denoted by the \texttt{ORDER BY} clause. Lastly it returns at most five (5)
-results, where \texttt{LIMIT 0,5} denotes only five rows starting from row 0
-should be returned.
-
 \begin{lstlisting}[caption={Query for retreiving the name of five customers and their contact person},label={sqlstatement1}]
 SELECT CustomerName, ContactName
 FROM Customers
@@ -81,23 +65,26 @@ LIMIT 0,5
 \end{table}
 
 
+This SQL query is designed to work with a database that contains a table
+called \textbf{Customers}, in which there are two columns called
+\textbf{CustomerName} and \textbf{ContactName}. This can be derived
+from the first two rows of the statement; it \texttt{SELECT}s the
+columns \textbf{CustomerName} and \textbf{ContactName} \texttt{FROM}
+the table \textbf{Customers}.
+
+The query also filters the results so that only rows \texttt{WHERE}
+\textbf{CustomerName} has been set is included, in other words where
+\textbf{CustomerName} \texttt{IS NOT NULL}\footnote{\texttt{NULL} in SQL is a
+  value denoting not knowing the actual value in the selected row and column}.
+It then sorts the results on \textbf{ContactName} in \texttt{DESC}ending order,
+as denoted by the \texttt{ORDER BY} clause. Lastly it returns at most five (5)
+results, where \texttt{LIMIT 0,5} denotes only five rows starting from row 0
+should be returned.
+
+
 \paragraph{Extract all suppliers who carry more than 4 products}
 For this query, only concepts not explained in the prior query will be
 explained in detail.
-
-This SQL query is designed to work with a database that contains a table
-called \textbf{Suppliers} and a table called \textbf{Products}. In the
-\texttt{SELECT}-row of the query, an aggregate value, \texttt{COUNT} can be
-seen. An aggregate value is a value calculated during the retreival of the
-result-set. In this case \texttt{COUNT} counts the number of unique
-values in the column \textbf{ProductID}. What makes the query only count
-the unique values (eg. a set of $\{1,2,2,3\} would count only three unique
-values$) is the keyword \texttt{DISTINCT}. This aggregate value is then
-aliased (given a name) \textbf{NumberOfProducts} for ease-of-use as well
-as recognisability.
-
-
-
 
 \begin{lstlisting}[caption={SQL Query to retreive all suppliers carrying more
       than four products.},label={sqlstatement2}]
@@ -124,14 +111,57 @@ HAVING NumberOfProducts > 4
   \label{table:sql2}
 \end{table}
 
+
+This SQL query is designed to work with a database that contains a table
+called \textbf{Suppliers} and a table called \textbf{Products}. In the
+\texttt{SELECT}-row of the query, an aggregate value, \texttt{COUNT} can be
+seen. An aggregate value is a value calculated during the retreival of the
+result-set. In this case \texttt{COUNT} counts the number of unique
+values in the column \textbf{ProductID}. What makes the query only count
+the unique values (eg. a set of $\{1,2,2,3\} would count only three unique
+values$) is the keyword \texttt{DISTINCT}. This aggregate value is then
+aliased (given a name) \textbf{NumberOfProducts} for ease-of-use as well
+as recognisability.
+
+As the data used in this query is located in two tables, one being
+\textbf{Suppliers} of the \texttt{SELECT}-part of the query, both
+tables need to be linked together in some meaningful way. This is
+accomplished using \texttt{JOIN}. In this query, rows from the table
+\textbf{Suppliers} are linked to rows in the table \textbf{Products}
+by matching the value of the column \textbf{SupplierID} in both
+tables (using the keyword \texttt{ON}). Thus each row won't be
+randomly matched to another row in the second table. The \texttt{LEFT}
+keyword in \texttt{LEFT JOIN} assures that all rows in the first table
+(\textbf{Suppliers}) will be returned even if there are no matching
+rows in the secondary table (\textbf{Products}). The reverse is however
+not true.
+
+The query also \texttt{GROUP}s all retreived rows by the value in the
+column \textbf{SupplierName}. This is important, otherwise the result
+would only consist of a single row as the aggregate value (\texttt{COUNT})
+then would range over all rows and not only the rows of the individual
+suppliers.
+
+The last row of the query filters the results, only returning rows
+where the column containing the aggregate value is higher than four
+(eg. \texttt{COUNT}ed unique -- for the supplier -- products are more
+than four). The \texttt{HAVING} keyword may seem analogous to \texttt{WHERE},
+as both filter the results of a query. There is, however, a fundamental
+difference between the both; \texttt{WHERE} filters the results \textit{during}
+retreival of the result-set, \texttt{HAVING} filters \textit{the retrieved}
+result-set (in other words after the results have been retrieved). Thus \texttt{WHERE}
+cannot be applied to aggregate values, as they are calculated \textit{during} the
+retrieval, but \texttt{HAVING} can.
+
 \subsubsection{Part B: Non-Functioning SQL statements}
 The following SQL statements are erroneous when processed by a WebSQL database.
-The first statement, however, would be correct if processed by a SQLite 3+
-database -- which will be made clear later.
+As all of the concepts and keywords have been explained in the previous
+section, the main focus will be what the queries were ment to do, what is
+wrong with the query and why it is erroneous.
 
 \paragraph{Select a random number of customers (at probability 0.5) from the
   database}
-\textit{Error 1: could not prepare statement (1 not authorized to use function: random)}
+
 \begin{lstlisting}[label={sqlstatement3}]
 SELECT *
 FROM Customers
@@ -139,8 +169,31 @@ WHERE RANDOM() > 0.5
 ORDER BY CustomerName
 \end{lstlisting}
 
+This query is designed to retreive a random amount of customers with each
+use. As mentioned previously, the WebSQL database is based on SQLite 3,
+which has a function called \texttt{RANDOM}. The \texttt{RANDOM} function
+is designed to return a random value between 0 and 1. As the function is used
+in the \texttt{WHERE} clause of the query, we use it to filter the result
+based on randomness.
+
+For each row retreived, a random value is generated and the inequality is
+evaluated. In this instance, every row has a probability of 0.5 (or 50\%)
+to be retreived.
+
+This query is, however, erroneous due to that the function itself is not
+uniformly implemented across WebSQL systems. Using Firefox, the following
+value is returned as a result: \\
+\begin{centering}
+\texttt{Undefined function 'RANDOM' in expression.}
+\end{centering}\\
+whilst in Google Chrome, the browser generates an alert-window with the
+following message:\\
+\begin{centering}
+\texttt{Error 1: could not prepare statement (1 not authorized to use function: random)}
+\end{centering}\\
+
 \paragraph{Select all customers that have placed at least 5 orders}
-\textit{Error 1: could not prepare statement (1 misuse of aggregate function COUNT())}
+
 \begin{lstlisting}[label={sqlstatement4}]
 SELECT DISTINCT *
 FROM Customers c
@@ -149,3 +202,21 @@ ON c.CustomerID = o.CustomerID
   WHERE COUNT(*) > 4
 GROUP BY c.CustomerID 
 \end{lstlisting}
+
+This query is designed to retrieve a list of all customers
+that have placed more than four orders. At first glance, the
+query might seem correct when it, in fact, contains a (sometimes)
+hard-to-find error.
+
+As mentioned in the second fully functional query, \texttt{WHERE}
+is a filter that is applied to the result \textit{during} retrieval
+of the results and \texttt{COUNT} is an aggregate value calculated
+from the retrieved result-set. Thus the issue with this query is
+that it tries to filter the results using a not yet calculated
+value (in this case the number of rows grouped by \textbf{CustomerID}).
+
+This results in the following error message, using Google Chrome:\\
+\begin{centering}
+\texttt{Error 1: could not prepare statement (1 misuse of aggregate function COUNT())}
+\end{centering}
+
