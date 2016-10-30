@@ -13,7 +13,7 @@ since grown to be one of the world'd most used penetration testing frameworks
 The framework provides an infrastructure for automating routine- and complex
 tasks, allowing the user to concentrate more on the unique aspects of the
 penetration testing. The framework does not only come with a set of exploits,
-readu-to-use, but also enables the user to relatively easily write custom
+ready-to-use, but also enables the user to relatively easily write custom
 exploits that can be added to the collection.
 
 Metasploit is currently available in several versions, with the framework
@@ -21,5 +21,21 @@ itself being Open Source.\cite{METASPLEDIT}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Part B: CVE-2015-3860}
-What is CVE and the notation 'CVE-2015-3860'.
-What is specifically CVE-2015-3860.
+CVE (Common Vulnerabilities and Exposures) is a dictionary of publicly
+known information security vulnerabilities and exposures, upheld by
+MITRE\cite{CVE}. These vulnerabilities and exposures are assigned a
+name of the form CVE-YYYY-NNNN, where YYYY is the year the vulnerability
+was assigned a CVE-name and NNNN is an arbitrary digit to distinguish
+vulnerabilities from each other. Since 2014, the arbitrary number is no
+longer limited to four digits.\cite{CVESYNTAX}
+
+\subsubsection{CVE-2015-3860}
+\textbf{CVE-2015-3860} is one of the vulnerabilities stored in the CVE
+dictionary, and it refers to a vulnerability found in Android 5.x
+(before 5.1.1).
+
+The vulnerability is connected to the lock-screen, where the number of
+characters in the passwordEntry input field was not restricted, allowing
+attackers to bypass access restrictions by entering a long enough string
+that triggers a SystemUI crash. An attacker must be in close proximity
+to the device in order to exploit this vulnerability.\ref{CVE-2015-3860}

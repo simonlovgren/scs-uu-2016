@@ -1,7 +1,7 @@
 % EVERY SECTION FILE SHOULD BE NAMED NN_sectionname.tex
 % where NN is order number with leading zeros
 %
-% 00_introduction.tex is reserved for the intro-text of the whole report. 
+% 00_introduction.tex is reserved for the intro-text of the whole report.
 
 % Name of section is start of new part of assignment
 \section{Task 1: SQL}
@@ -31,11 +31,11 @@ by w3schools can be used to test SQL queries against the WebSQL interface.
 
 \subsubsection{Part A: Functioning SQL statements}
 The following SQL statements are fully functional (non erroneous) when processed
-by a WebSQL database. 
+by a WebSQL database.
 
 \paragraph{Create a list of customers and their contact person}
 
-\begin{lstlisting}[caption={Query for retreiving the name of five customers and their contact person},label={sqlstatement1}]
+\begin{lstlisting}[caption={Query for retrieving the name of five customers and their contact person},label={sqlstatement1}]
 SELECT CustomerName, ContactName
 FROM Customers
 WHERE ContactName IS NOT NULL
@@ -86,7 +86,7 @@ should be returned.
 For this query, only concepts not explained in the prior query will be
 explained in detail.
 
-\begin{lstlisting}[caption={SQL Query to retreive all suppliers carrying more
+\begin{lstlisting}[caption={SQL Query to retrieve all suppliers carrying more
       than four products.},label={sqlstatement2}]
 SELECT SupplierName, COUNT(DISTINCT ProductID) AS NumberOfProducts
 FROM Suppliers s
@@ -115,7 +115,7 @@ HAVING NumberOfProducts > 4
 This SQL query is designed to work with a database that contains a table
 called \textbf{Suppliers} and a table called \textbf{Products}. In the
 \texttt{SELECT}-row of the query, an aggregate value, \texttt{COUNT} can be
-seen. An aggregate value is a value calculated during the retreival of the
+seen. An aggregate value is a value calculated during the retrieval of the
 result-set. In this case \texttt{COUNT} counts the number of unique
 values in the column \textbf{ProductID}. What makes the query only count
 the unique values (eg. a set of $\{1,2,2,3\} would count only three unique
@@ -136,7 +136,7 @@ keyword in \texttt{LEFT JOIN} assures that all rows in the first table
 rows in the secondary table (\textbf{Products}). The reverse is however
 not true.
 
-The query also \texttt{GROUP}s all retreived rows by the value in the
+The query also \texttt{GROUP}s all retrieved rows by the value in the
 column \textbf{SupplierName}. This is important, otherwise the result
 would only consist of a single row as the aggregate value (\texttt{COUNT})
 then would range over all rows and not only the rows of the individual
@@ -148,7 +148,7 @@ where the column containing the aggregate value is higher than four
 than four). The \texttt{HAVING} keyword may seem analogous to \texttt{WHERE},
 as both filter the results of a query. There is, however, a fundamental
 difference between the both; \texttt{WHERE} filters the results \textit{during}
-retreival of the result-set, \texttt{HAVING} filters \textit{the retrieved}
+retrieval of the result-set, \texttt{HAVING} filters \textit{the retrieved}
 result-set (in other words after the results have been retrieved). Thus \texttt{WHERE}
 cannot be applied to aggregate values, as they are calculated \textit{during} the
 retrieval, but \texttt{HAVING} can.
@@ -156,7 +156,7 @@ retrieval, but \texttt{HAVING} can.
 \subsubsection{Part B: Non-Functioning SQL statements}
 The following SQL statements are erroneous when processed by a WebSQL database.
 As all of the concepts and keywords have been explained in the previous
-section, the main focus will be what the queries were ment to do, what is
+section, the main focus will be what the queries were meant to do, what is
 wrong with the query and why it is erroneous.
 
 \paragraph{Select a random number of customers (at probability 0.5) from the
@@ -169,16 +169,16 @@ WHERE RANDOM() > 0.5
 ORDER BY CustomerName
 \end{lstlisting}
 
-This query is designed to retreive a random amount of customers with each
+This query is designed to retrieve a random amount of customers with each
 use. As mentioned previously, the WebSQL database is based on SQLite 3,
 which has a function called \texttt{RANDOM}. The \texttt{RANDOM} function
 is designed to return a random value between 0 and 1. As the function is used
 in the \texttt{WHERE} clause of the query, we use it to filter the result
 based on randomness.
 
-For each row retreived, a random value is generated and the inequality is
+For each row retrieved, a random value is generated and the inequality is
 evaluated. In this instance, every row has a probability of 0.5 (or 50\%)
-to be retreived.
+to be retrieved.
 
 This query is, however, erroneous due to that the function itself is not
 uniformly implemented across WebSQL systems. Using Firefox, the following
@@ -200,7 +200,7 @@ FROM Customers c
 LEFT JOIN Orders o
 ON c.CustomerID = o.CustomerID
   WHERE COUNT(*) > 4
-GROUP BY c.CustomerID 
+GROUP BY c.CustomerID
 \end{lstlisting}
 
 This query is designed to retrieve a list of all customers
@@ -219,4 +219,3 @@ This results in the following error message, using Google Chrome:\\
 \begin{centering}
 \texttt{Error 1: could not prepare statement (1 misuse of aggregate function COUNT())}
 \end{centering}
-
