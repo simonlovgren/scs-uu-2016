@@ -118,14 +118,15 @@ called \textbf{Suppliers} and a table called \textbf{Products}. In the
 seen. An aggregate value is a value calculated during the retrieval of the
 result-set. In this case \texttt{COUNT} counts the number of unique
 values in the column \textbf{ProductID}. What makes the query only count
-the unique values (eg. a set of $\{1,2,2,3\} would count only three unique
-values$) is the keyword \texttt{DISTINCT}. This aggregate value is then
+the unique values (ex. a set of $\{1,2,2,3\}$ would count only three unique
+values) is the keyword \texttt{DISTINCT}. This aggregate value is then
 aliased (given a name) \textbf{NumberOfProducts} for ease-of-use as well
 as recognisability.
 
-As the data used in this query is located in two tables, one being
-\textbf{Suppliers} of the \texttt{SELECT}-part of the query, both
-tables need to be linked together in some meaningful way. This is
+As the data used in this query is located in two tables -- one being
+\textbf{Suppliers} of the \texttt{SELECT}-part of the query, and the
+other being \textbf{Products} -- both tables need to be linked together
+in some meaningful way. This is
 accomplished using \texttt{JOIN}. In this query, rows from the table
 \textbf{Suppliers} are linked to rows in the table \textbf{Products}
 by matching the value of the column \textbf{SupplierID} in both
@@ -133,7 +134,7 @@ tables (using the keyword \texttt{ON}). Thus each row won't be
 randomly matched to another row in the second table. The \texttt{LEFT}
 keyword in \texttt{LEFT JOIN} assures that all rows in the first table
 (\textbf{Suppliers}) will be returned even if there are no matching
-rows in the secondary table (\textbf{Products}). The reverse is however
+rows in the secondary table (\textbf{Products}). The reverse is, however,
 not true.
 
 The query also \texttt{GROUP}s all retrieved rows by the value in the
@@ -151,7 +152,7 @@ difference between the both; \texttt{WHERE} filters the results \textit{during}
 retrieval of the result-set, \texttt{HAVING} filters \textit{the retrieved}
 result-set (in other words after the results have been retrieved). Thus \texttt{WHERE}
 cannot be applied to aggregate values, as they are calculated \textit{during} the
-retrieval, but \texttt{HAVING} can.
+retrieval, instead \texttt{HAVING} is used.
 
 \subsubsection{Part B: Non-Functioning SQL statements}
 The following SQL statements are erroneous when processed by a WebSQL database.
@@ -174,23 +175,18 @@ use. As mentioned previously, the WebSQL database is based on SQLite 3,
 which has a function called \texttt{RANDOM}. The \texttt{RANDOM} function
 is designed to return a random value between 0 and 1. As the function is used
 in the \texttt{WHERE} clause of the query, we use it to filter the result
-based on randomness.
-
-For each row retrieved, a random value is generated and the inequality is
-evaluated. In this instance, every row has a probability of 0.5 (or 50\%)
-to be retrieved.
+based on probability. For each row retrieved, a random value is generated
+and the inequality is evaluated. In this instance, every row has a
+probability of 0.5 (or 50\%) to be retrieved.
 
 This query is, however, erroneous due to that the function itself is not
 uniformly implemented across WebSQL systems. Using Firefox, the following
-value is returned as a result: \\
-\begin{centering}
-\texttt{Undefined function 'RANDOM' in expression.}
-\end{centering}\\
+value is returned as a result:
+$$\texttt{Undefined function 'RANDOM' in expression.}$$
+
 whilst in Google Chrome, the browser generates an alert-window with the
-following message:\\
-\begin{centering}
-\texttt{Error 1: could not prepare statement (1 not authorized to use function: random)}
-\end{centering}\\
+following message:
+$$\texttt{Error 1: could not prepare statement (1 not authorized to use function: random)}$$
 
 \paragraph{Select all customers that have placed at least 5 orders}
 
@@ -210,12 +206,11 @@ hard-to-find error.
 
 As mentioned in the second fully functional query, \texttt{WHERE}
 is a filter that is applied to the result \textit{during} retrieval
-of the results and \texttt{COUNT} is an aggregate value calculated
-from the retrieved result-set. Thus the issue with this query is
+of the results and \texttt{COUNT} is an aggregate value \textit{calculated during}
+retrieval of the results. Thus the issue with this query is
 that it tries to filter the results using a not yet calculated
 value (in this case the number of rows grouped by \textbf{CustomerID}).
 
-This results in the following error message, using Google Chrome:\\
-\begin{centering}
-\texttt{Error 1: could not prepare statement (1 misuse of aggregate function COUNT())}
-\end{centering}
+This results in the following error message, using Google Chrome:
+$$\texttt{Error 1: could not prepare statement (1 misuse of aggregate function COUNT())}$$
+

@@ -1,5 +1,6 @@
 % Name of section is start of new part of assignment
-\section{Task 2: Kali Linux and an introduction to Pentesting}
+\pagebreak
+\section{Task 2: Get started with Kali Linux and Juice Shop}
 This section follows the exercises \textit{Bash Line Commands \& Shell
   Scripting} from Dans Courses\cite{DANSCOURSES} using Kali Linux\footnote{
   \texttt{Kali Linux} is a Linux-distribution, based on the distribution
@@ -21,7 +22,7 @@ be briefly explained.
 \label{sec:parta1}
 First, \texttt{nmap} is used to scan the network for live
 hosts and to scan the live hosts for open ports. Here
-the IP-range 192.168.56.1, 192.168.56.2, \dots 192.168.56.254
+the IP-range 192.168.56.1, 192.168.56.2, \dots, 192.168.56.254
 is scanned.
 
 \begin{lstlisting}[numbers=none, language={}, frame=single, framexleftmargin={0.2em}]
@@ -50,13 +51,14 @@ Nmap done: 254 IP addresses (3 hosts up) scanned in 16.36 seconds
 \end{lstlisting}
 
 To not have to scan the network every time the result is processed,
-it can be written to a file. In this case the result is written
+the output can be written to a file. In this case the result is written
 to the file \texttt{exercise\_a1.txt}.
 
 \begin{lstlisting}[numbers=none, language={}, frame=single, framexleftmargin={0.2em}]
 # nmap 192.168.56.1-254 > exercise_a1.txt
 \end{lstlisting}
 
+\pagebreak
 To read the contents of a file, the command \texttt{cat} can be used.
 It simply prints the contents of a file.
 
@@ -98,7 +100,7 @@ Nmap scan report for 192.168.56.102
 \end{lstlisting}
 
 To extract a specific part of each line returned by grep, the
-\texttt{cut} is used. In this case, cut is used to split each
+\texttt{cut} command is used. In this case, \texttt{cut} is used to split each
 line by a delimiting character (here whitespace) and from the
 resulting split, the fifth field is extracted.
 
@@ -121,9 +123,10 @@ cat exercise_a1.txt | grep report | cut -d " " -f 5 | sort
 192.168.56.102
 \end{lstlisting}
 
-These commands can then be used to filter- and cut data of multiple
-types. In this exaple, grep matches either \textit{report} or \textit{open}.
-cut is then used to, in a systematic way, split each returned row and extract
+\pagebreak
+These commands can then be used to filter- and cut data in multiple steps.
+In this example, \texttt{grep} matches either \textit{report} or \textit{open}.
+\texttt{cut} is then used to, in a systematic way, split each returned row and extract
 only the IP-address and open ports of each host on the network.
 
 \begin{lstlisting}[numbers=none, language={}, frame=single, framexleftmargin={0.2em}]
@@ -138,8 +141,8 @@ cat exercise_a1.txt | grep "report\|open" | cut -d "/" -f1 | cut -d "r" -f 4 | c
 \subsubsection{Part A2: IP-range 10.0.1.1-254}
 This exercise is analogous to the exercise described in section \ref{sec:parta1},
 as it is the same exercise repeated with another IP-range/network containing
-more hosts than the network scanned in section \ref{sec:parta1}. Thus the steps in
-this section will be even briefer.
+more hosts than the network scanned in section \ref{sec:parta1}. Thus the description of
+the steps in this section will be even briefer.
 
 The network is scanned using \texttt{nmap} to see whether any hosts are
 live and reachable.
@@ -437,7 +440,7 @@ the leading digit of the last segment is one.
 \end{lstlisting}
 
 Here \texttt{grep} is used to filter lines containing the keyword
-\textit{report} or \texttt{open}. Cut is then systematically used
+\textit{report} or \textit{open}. \texttt{cut} is then systematically used
 to extract only IP-addresses and open port numbers.
 
 \begin{lstlisting}[numbers=none, language={}, frame=single, framexleftmargin={0.2em}]
@@ -515,23 +518,24 @@ since the exercises were written (last update in September 2013\cite{DANSCOURSES
 Thus the results of the commands do not fully match the ones in the exercise.
 
 Some characters have also been removed from the source code, as they are incompatible
-with the encoding- and display of this report.
+with latex.
 
 First \texttt{wget} is used to download the source of the website's homepage. It is
-stored as index.html.
+stored as \texttt{index.html}.
 
 \begin{lstlisting}[numbers=none, language={}, frame=single, framexleftmargin={0.2em}]
 # wget "http://yahoo.com"
 \end{lstlisting}
 
 \texttt{cat} is used to verify the contents of the file. The output of the
-command has been moved to attachments, as it is rather extensive.
+command has been moved to attachments, as it is rather extensive. See attachment \ref{att:yahooindex}.
 \begin{lstlisting}[numbers=none, language={}, frame=single, framexleftmargin={0.2em}]
 # cat index.html | grep "yahoo.com"
 
-[output]\ref{att:yahooindex}
+[output, see attachment]
 \end{lstlisting}
 
+\pagebreak
 \texttt{grep} is used to filter all rows containing the string \textit{yahoo.com}.
 
 \begin{lstlisting}[numbers=none, language={}, frame=single, framexleftmargin={0.2em}]
@@ -581,7 +585,7 @@ uh;src
 59
 \end{lstlisting}
 
-The result is further refined by using \texttt{cut} another time.
+The result is further refined by using \texttt{cut} a second time.
 
 \begin{lstlisting}[numbers=none, language={}, frame=single, framexleftmargin={0.2em}]
 # cat index.html | grep "yahoo.com" | cut -d ":" -f 2 |  cut -d "/" -f 3
@@ -630,7 +634,7 @@ sb.scorecardresearch.com
 59
 \end{lstlisting}
 
-Then sort is used with the \texttt{-u}-flag, which only returns unique rows.
+Then sort is used with the \texttt{-u} flag, which only returns unique rows.
 
 \begin{lstlisting}[numbers=none, language={}, frame=single, framexleftmargin={0.2em}]
 # cat index.html | grep "yahoo.com" | cut -d ":" -f 2 |  cut -d "/" -f 3 | sort -u
@@ -663,6 +667,9 @@ uk.news.yahoo.com
 url" content="http
 www.yahoo.com
 \end{lstlisting}
+
+The result is then further refined by removing trailing text for some links.
+
 \begin{lstlisting}[numbers=none, language={}, frame=single, framexleftmargin={0.2em}]
 # cat index.html | grep "yahoo.com" | cut -d ":" -f 2 |  cut -d "/" -f 3 | sort -u | cut -d "\"" -f 1
 
@@ -735,7 +742,7 @@ tasks, such as resolving IP-addresses from multiple hostnames or pinging a
 wide range of IP-addresses.
 
 Shell-scripts are files containing command-line instructions (or \textit{commands}),
-the very same one types by hand. In its simplest, a shell-script could be used to alias an
+the very same typed into the terminal. In its simplest, a shell-script could be used to alias an
 otherwise long commands. Consider the following command, which list the five last log
 messages from Google Crome:
 
@@ -746,32 +753,35 @@ text file with the file-extension \texttt{.sh}. This file (shell-script) can
 then be called directly from the command-line -- as long as it has been allowed
 to be executed using, for example, \texttt{chmod +x myfile.sh}.
 
-To execute the shell-script while in the same folder, one types
-\texttt{./myscipt.sh}. However, if the script file has been placed in one of the
+The shell-script can then be executed by typing \texttt{/path/to/myscipt.sh} into the
+terminal\footnote{dynamic paths also work (ex. \texttt{../myscript.sh})}. However, if the script file has been placed in one of the
 binary folders\footnote{\texttt{/bin}, \texttt{/usr/local/bin}, \texttt{\textasciitilde/bin}
-  or alike, depending on system.}, then the, script can be called from anywhere only
-using its name (\texttt{myscript.sh}.
+  or alike, depending on system.}, then the script can be called from anywhere only typing
+its name (ex. \texttt{myscript.sh}).
 
 Below are the two shell-scripts, fully commented for every line as to
 clearly describe exactly what the script does.
 
+\pagebreak
 \subsubsection{Bash script: Resolving hosts from file}
 \texttt{ips.sh} is a script that reads hostnames line-by-line from a plain text file,
 passing them one-by-one to the command \texttt{host} which resolves the IP-address of
 a host. The file is supplied as an argument when calling the script, thus it is not
 limited to a specific file.
 
-If the script is called without a filename ,as argument, it will print an error-text
-as well as how the script is used. This is also true for if the name of a
-non-existing file has been supplied as an argument.
+If the script is called without a filename as argument, it will print an error-text
+as well information about how the script is to be used. This is also true for if the name of a
+non-existing file has been supplied.
 
 \lstinputlisting[language=bash, caption = \texttt{ips.sh}]{../exercise3/ips.sh}
 
+\pagebreak
 The resulting output of running the script with the file \texttt{domains2.txt}
 generated in section \ref{sec:yahoo} is the following:
 
 \lstinputlisting[numbers=none, language={}, frame=single, framexleftmargin={0.2em}]{../domain-resolve.txt}
 
+\pagebreak
 \subsubsection{Bash script: Ping IP-range}
 \texttt{bruteping.sh} is a script that takes an IP-address or IP-range as an
 argument and then (sequentially) pings each address. It verifies the format of the
@@ -783,6 +793,6 @@ is used if the argument is invalid or none has been provided.
 
 \lstinputlisting[language=bash, caption = \texttt{bruteping.sh}]{../exercise3/bruteping.sh}
 
-This is what we get if we execute the script:
+This is the result of an example execution:
 
 \lstinputlisting[numbers=none, language={}, frame=single, framexleftmargin={0.2em}]{../ping.txt}
