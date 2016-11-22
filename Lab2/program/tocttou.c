@@ -44,18 +44,19 @@ char *readline() {
 
 int main(int argc, char **argv)
 {
+  // Check at least two arguments present
   if(argc < 2){
     puts("Missing argument: <file>");
     return 1;
   }
-
+  // Get file name
   char *file = argv[1];
-  
+  // Check if file exists
   if(access(file, F_OK) == -1) {
     printf("ERROR: File not found - %s\n", file);
     return 1;
   }
-
+  // Check if writable
   if(access(file, W_OK) == -1) {
     printf("ERROR: File not writable - %s\n", file);
     return 1;
