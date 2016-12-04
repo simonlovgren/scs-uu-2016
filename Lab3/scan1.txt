@@ -1,0 +1,587 @@
+
+Starting Nmap 7.01 ( https://nmap.org ) at 2016-12-04 15:53 CET
+Initiating Ping Scan at 15:53
+Scanning 256 hosts [4 ports/host]
+Completed Ping Scan at 15:55, 83.19s elapsed (256 total hosts)
+Initiating Parallel DNS resolution of 256 hosts. at 15:55
+Completed Parallel DNS resolution of 256 hosts. at 15:55, 2.09s elapsed
+Nmap scan report for 10.0.1.0 [host down]
+Nmap scan report for 10.0.1.1 [host down]
+Nmap scan report for 10.0.1.3 [host down]
+Nmap scan report for 10.0.1.4 [host down]
+Nmap scan report for 10.0.1.5 [host down]
+Nmap scan report for 10.0.1.6 [host down]
+Nmap scan report for 10.0.1.7 [host down]
+Nmap scan report for 10.0.1.8 [host down]
+Nmap scan report for 10.0.1.9 [host down]
+Nmap scan report for 10.0.1.10 [host down]
+Nmap scan report for 10.0.1.11 [host down]
+Nmap scan report for 10.0.1.12 [host down]
+Nmap scan report for 10.0.1.13 [host down]
+Nmap scan report for 10.0.1.14 [host down]
+Nmap scan report for 10.0.1.15 [host down]
+Nmap scan report for 10.0.1.16 [host down]
+Nmap scan report for 10.0.1.17 [host down]
+Nmap scan report for 10.0.1.18 [host down]
+Nmap scan report for 10.0.1.19 [host down]
+Nmap scan report for 10.0.1.20 [host down]
+Nmap scan report for 10.0.1.21 [host down]
+Nmap scan report for 10.0.1.22 [host down]
+Nmap scan report for 10.0.1.23 [host down]
+Nmap scan report for 10.0.1.24 [host down]
+Nmap scan report for 10.0.1.25 [host down]
+Nmap scan report for 10.0.1.26 [host down]
+Nmap scan report for 10.0.1.27 [host down]
+Nmap scan report for 10.0.1.28 [host down]
+Nmap scan report for 10.0.1.29 [host down]
+Nmap scan report for 10.0.1.31 [host down]
+Nmap scan report for 10.0.1.32 [host down]
+Nmap scan report for 10.0.1.33 [host down]
+Nmap scan report for 10.0.1.34 [host down]
+Nmap scan report for 10.0.1.36 [host down]
+Nmap scan report for 10.0.1.37 [host down]
+Nmap scan report for 10.0.1.38 [host down]
+Nmap scan report for 10.0.1.39 [host down]
+Nmap scan report for 10.0.1.40 [host down]
+Nmap scan report for 10.0.1.42 [host down]
+Nmap scan report for 10.0.1.43 [host down]
+Nmap scan report for 10.0.1.44 [host down]
+Nmap scan report for 10.0.1.45 [host down]
+Nmap scan report for 10.0.1.46 [host down]
+Nmap scan report for 10.0.1.47 [host down]
+Nmap scan report for 10.0.1.48 [host down]
+Nmap scan report for 10.0.1.49 [host down]
+Nmap scan report for 10.0.1.51 [host down]
+Nmap scan report for 10.0.1.52 [host down]
+Nmap scan report for 10.0.1.53 [host down]
+Nmap scan report for 10.0.1.54 [host down]
+Nmap scan report for 10.0.1.56 [host down]
+Nmap scan report for 10.0.1.57 [host down]
+Nmap scan report for 10.0.1.58 [host down]
+Nmap scan report for 10.0.1.59 [host down]
+Nmap scan report for 10.0.1.61 [host down]
+Nmap scan report for 10.0.1.62 [host down]
+Nmap scan report for 10.0.1.63 [host down]
+Nmap scan report for 10.0.1.64 [host down]
+Nmap scan report for 10.0.1.66 [host down]
+Nmap scan report for 10.0.1.67 [host down]
+Nmap scan report for 10.0.1.68 [host down]
+Nmap scan report for 10.0.1.69 [host down]
+Nmap scan report for 10.0.1.71 [host down]
+Nmap scan report for 10.0.1.72 [host down]
+Nmap scan report for 10.0.1.73 [host down]
+Nmap scan report for 10.0.1.74 [host down]
+Nmap scan report for 10.0.1.75 [host down]
+Nmap scan report for 10.0.1.76 [host down]
+Nmap scan report for 10.0.1.77 [host down]
+Nmap scan report for 10.0.1.78 [host down]
+Nmap scan report for 10.0.1.79 [host down]
+Nmap scan report for 10.0.1.80 [host down]
+Nmap scan report for 10.0.1.81 [host down]
+Nmap scan report for 10.0.1.82 [host down]
+Nmap scan report for 10.0.1.83 [host down]
+Nmap scan report for 10.0.1.84 [host down]
+Nmap scan report for 10.0.1.85 [host down]
+Nmap scan report for 10.0.1.86 [host down]
+Nmap scan report for 10.0.1.87 [host down]
+Nmap scan report for 10.0.1.88 [host down]
+Nmap scan report for 10.0.1.89 [host down]
+Nmap scan report for 10.0.1.90 [host down]
+Nmap scan report for 10.0.1.91 [host down]
+Nmap scan report for 10.0.1.92 [host down]
+Nmap scan report for 10.0.1.93 [host down]
+Nmap scan report for 10.0.1.94 [host down]
+Nmap scan report for 10.0.1.95 [host down]
+Nmap scan report for 10.0.1.96 [host down]
+Nmap scan report for 10.0.1.97 [host down]
+Nmap scan report for 10.0.1.98 [host down]
+Nmap scan report for 10.0.1.99 [host down]
+Nmap scan report for 10.0.1.101 [host down]
+Nmap scan report for 10.0.1.102 [host down]
+Nmap scan report for 10.0.1.104 [host down]
+Nmap scan report for 10.0.1.105 [host down]
+Nmap scan report for 10.0.1.106 [host down]
+Nmap scan report for 10.0.1.107 [host down]
+Nmap scan report for 10.0.1.108 [host down]
+Nmap scan report for 10.0.1.109 [host down]
+Nmap scan report for 10.0.1.110 [host down]
+Nmap scan report for 10.0.1.111 [host down]
+Nmap scan report for 10.0.1.112 [host down]
+Nmap scan report for 10.0.1.113 [host down]
+Nmap scan report for 10.0.1.114 [host down]
+Nmap scan report for 10.0.1.115 [host down]
+Nmap scan report for 10.0.1.116 [host down]
+Nmap scan report for 10.0.1.117 [host down]
+Nmap scan report for 10.0.1.118 [host down]
+Nmap scan report for 10.0.1.119 [host down]
+Nmap scan report for 10.0.1.120 [host down]
+Nmap scan report for 10.0.1.121 [host down]
+Nmap scan report for 10.0.1.122 [host down]
+Nmap scan report for 10.0.1.123 [host down]
+Nmap scan report for 10.0.1.124 [host down]
+Nmap scan report for 10.0.1.125 [host down]
+Nmap scan report for 10.0.1.126 [host down]
+Nmap scan report for 10.0.1.127 [host down]
+Nmap scan report for 10.0.1.128 [host down]
+Nmap scan report for 10.0.1.129 [host down]
+Nmap scan report for 10.0.1.130 [host down]
+Nmap scan report for 10.0.1.131 [host down]
+Nmap scan report for 10.0.1.132 [host down]
+Nmap scan report for 10.0.1.133 [host down]
+Nmap scan report for 10.0.1.134 [host down]
+Nmap scan report for 10.0.1.135 [host down]
+Nmap scan report for 10.0.1.136 [host down]
+Nmap scan report for 10.0.1.137 [host down]
+Nmap scan report for 10.0.1.138 [host down]
+Nmap scan report for 10.0.1.139 [host down]
+Nmap scan report for 10.0.1.140 [host down]
+Nmap scan report for 10.0.1.141 [host down]
+Nmap scan report for 10.0.1.142 [host down]
+Nmap scan report for 10.0.1.143 [host down]
+Nmap scan report for 10.0.1.144 [host down]
+Nmap scan report for 10.0.1.145 [host down]
+Nmap scan report for 10.0.1.146 [host down]
+Nmap scan report for 10.0.1.147 [host down]
+Nmap scan report for 10.0.1.148 [host down]
+Nmap scan report for 10.0.1.149 [host down]
+Nmap scan report for 10.0.1.150 [host down]
+Nmap scan report for 10.0.1.151 [host down]
+Nmap scan report for 10.0.1.152 [host down]
+Nmap scan report for 10.0.1.153 [host down]
+Nmap scan report for 10.0.1.154 [host down]
+Nmap scan report for 10.0.1.155 [host down]
+Nmap scan report for 10.0.1.156 [host down]
+Nmap scan report for 10.0.1.157 [host down]
+Nmap scan report for 10.0.1.158 [host down]
+Nmap scan report for 10.0.1.159 [host down]
+Nmap scan report for 10.0.1.160 [host down]
+Nmap scan report for 10.0.1.161 [host down]
+Nmap scan report for 10.0.1.162 [host down]
+Nmap scan report for 10.0.1.163 [host down]
+Nmap scan report for 10.0.1.164 [host down]
+Nmap scan report for 10.0.1.165 [host down]
+Nmap scan report for 10.0.1.166 [host down]
+Nmap scan report for 10.0.1.167 [host down]
+Nmap scan report for 10.0.1.168 [host down]
+Nmap scan report for 10.0.1.169 [host down]
+Nmap scan report for 10.0.1.170 [host down]
+Nmap scan report for 10.0.1.171 [host down]
+Nmap scan report for 10.0.1.172 [host down]
+Nmap scan report for 10.0.1.173 [host down]
+Nmap scan report for 10.0.1.174 [host down]
+Nmap scan report for 10.0.1.175 [host down]
+Nmap scan report for 10.0.1.176 [host down]
+Nmap scan report for 10.0.1.177 [host down]
+Nmap scan report for 10.0.1.178 [host down]
+Nmap scan report for 10.0.1.179 [host down]
+Nmap scan report for 10.0.1.180 [host down]
+Nmap scan report for 10.0.1.181 [host down]
+Nmap scan report for 10.0.1.182 [host down]
+Nmap scan report for 10.0.1.183 [host down]
+Nmap scan report for 10.0.1.184 [host down]
+Nmap scan report for 10.0.1.185 [host down]
+Nmap scan report for 10.0.1.186 [host down]
+Nmap scan report for 10.0.1.187 [host down]
+Nmap scan report for 10.0.1.188 [host down]
+Nmap scan report for 10.0.1.189 [host down]
+Nmap scan report for 10.0.1.190 [host down]
+Nmap scan report for 10.0.1.191 [host down]
+Nmap scan report for 10.0.1.192 [host down]
+Nmap scan report for 10.0.1.193 [host down]
+Nmap scan report for 10.0.1.194 [host down]
+Nmap scan report for 10.0.1.195 [host down]
+Nmap scan report for 10.0.1.196 [host down]
+Nmap scan report for 10.0.1.197 [host down]
+Nmap scan report for 10.0.1.198 [host down]
+Nmap scan report for 10.0.1.199 [host down]
+Nmap scan report for 10.0.1.200 [host down]
+Nmap scan report for 10.0.1.201 [host down]
+Nmap scan report for 10.0.1.202 [host down]
+Nmap scan report for 10.0.1.203 [host down]
+Nmap scan report for 10.0.1.204 [host down]
+Nmap scan report for 10.0.1.205 [host down]
+Nmap scan report for 10.0.1.206 [host down]
+Nmap scan report for 10.0.1.207 [host down]
+Nmap scan report for 10.0.1.208 [host down]
+Nmap scan report for 10.0.1.209 [host down]
+Nmap scan report for 10.0.1.210 [host down]
+Nmap scan report for 10.0.1.211 [host down]
+Nmap scan report for 10.0.1.212 [host down]
+Nmap scan report for 10.0.1.213 [host down]
+Nmap scan report for 10.0.1.214 [host down]
+Nmap scan report for 10.0.1.215 [host down]
+Nmap scan report for 10.0.1.216 [host down]
+Nmap scan report for 10.0.1.217 [host down]
+Nmap scan report for 10.0.1.218 [host down]
+Nmap scan report for 10.0.1.219 [host down]
+Nmap scan report for 10.0.1.220 [host down]
+Nmap scan report for 10.0.1.221 [host down]
+Nmap scan report for 10.0.1.222 [host down]
+Nmap scan report for 10.0.1.223 [host down]
+Nmap scan report for 10.0.1.224 [host down]
+Nmap scan report for 10.0.1.225 [host down]
+Nmap scan report for 10.0.1.226 [host down]
+Nmap scan report for 10.0.1.227 [host down]
+Nmap scan report for 10.0.1.228 [host down]
+Nmap scan report for 10.0.1.229 [host down]
+Nmap scan report for 10.0.1.230 [host down]
+Nmap scan report for 10.0.1.231 [host down]
+Nmap scan report for 10.0.1.232 [host down]
+Nmap scan report for 10.0.1.233 [host down]
+Nmap scan report for 10.0.1.234 [host down]
+Nmap scan report for 10.0.1.235 [host down]
+Nmap scan report for 10.0.1.236 [host down]
+Nmap scan report for 10.0.1.237 [host down]
+Nmap scan report for 10.0.1.238 [host down]
+Nmap scan report for 10.0.1.239 [host down]
+Nmap scan report for 10.0.1.240 [host down]
+Nmap scan report for 10.0.1.241 [host down]
+Nmap scan report for 10.0.1.242 [host down]
+Nmap scan report for 10.0.1.243 [host down]
+Nmap scan report for 10.0.1.244 [host down]
+Nmap scan report for 10.0.1.245 [host down]
+Nmap scan report for 10.0.1.246 [host down]
+Nmap scan report for 10.0.1.247 [host down]
+Nmap scan report for 10.0.1.248 [host down]
+Nmap scan report for 10.0.1.249 [host down]
+Nmap scan report for 10.0.1.250 [host down]
+Nmap scan report for 10.0.1.251 [host down]
+Nmap scan report for 10.0.1.252 [host down]
+Nmap scan report for 10.0.1.253 [host down]
+Nmap scan report for 10.0.1.254 [host down]
+Nmap scan report for 10.0.1.255 [host down]
+Initiating SYN Stealth Scan at 15:55
+Scanning 11 hosts [1000 ports/host]
+Discovered open port 139/tcp on 10.0.1.60
+Discovered open port 139/tcp on 10.0.1.65
+Discovered open port 139/tcp on 10.0.1.70
+Discovered open port 139/tcp on 10.0.1.103
+Discovered open port 1025/tcp on 10.0.1.70
+Discovered open port 21/tcp on 10.0.1.41
+Discovered open port 21/tcp on 10.0.1.35
+Discovered open port 53/tcp on 10.0.1.50
+Discovered open port 21/tcp on 10.0.1.30
+Discovered open port 3306/tcp on 10.0.1.100
+Discovered open port 22/tcp on 10.0.1.41
+Discovered open port 22/tcp on 10.0.1.50
+Discovered open port 22/tcp on 10.0.1.2
+Discovered open port 22/tcp on 10.0.1.35
+Discovered open port 80/tcp on 10.0.1.2
+Discovered open port 80/tcp on 10.0.1.35
+Discovered open port 22/tcp on 10.0.1.100
+Discovered open port 443/tcp on 10.0.1.2
+Discovered open port 111/tcp on 10.0.1.50
+Discovered open port 135/tcp on 10.0.1.65
+Discovered open port 80/tcp on 10.0.1.100
+Discovered open port 135/tcp on 10.0.1.70
+Discovered open port 443/tcp on 10.0.1.100
+Discovered open port 445/tcp on 10.0.1.60
+Discovered open port 445/tcp on 10.0.1.65
+Discovered open port 111/tcp on 10.0.1.100
+Discovered open port 445/tcp on 10.0.1.70
+Discovered open port 49156/tcp on 10.0.1.65
+Discovered open port 445/tcp on 10.0.1.103
+Discovered open port 1027/tcp on 10.0.1.70
+Discovered open port 13782/tcp on 10.0.1.41
+Discovered open port 6667/tcp on 10.0.1.50
+Discovered open port 1099/tcp on 10.0.1.60
+Discovered open port 22/tcp on 10.0.1.30
+Discovered open port 80/tcp on 10.0.1.30
+Discovered open port 110/tcp on 10.0.1.30
+Discovered open port 25/tcp on 10.0.1.30
+Discovered open port 143/tcp on 10.0.1.30
+Discovered open port 2121/tcp on 10.0.1.50
+Discovered open port 2121/tcp on 10.0.1.55
+Discovered open port 2121/tcp on 10.0.1.103
+Discovered open port 49153/tcp on 10.0.1.65
+Discovered open port 49154/tcp on 10.0.1.65
+Discovered open port 49155/tcp on 10.0.1.65
+Discovered open port 49152/tcp on 10.0.1.65
+Discovered open port 631/tcp on 10.0.1.41
+Discovered open port 49157/tcp on 10.0.1.65
+Discovered open port 631/tcp on 10.0.1.35
+Discovered open port 631/tcp on 10.0.1.100
+Completed SYN Stealth Scan against 10.0.1.55 in 2.97s (10 hosts left)
+Completed SYN Stealth Scan against 10.0.1.41 in 2.98s (9 hosts left)
+Completed SYN Stealth Scan against 10.0.1.35 in 2.99s (8 hosts left)
+Completed SYN Stealth Scan against 10.0.1.50 in 2.99s (7 hosts left)
+Completed SYN Stealth Scan against 10.0.1.60 in 2.99s (6 hosts left)
+Completed SYN Stealth Scan against 10.0.1.2 in 3.01s (5 hosts left)
+Completed SYN Stealth Scan against 10.0.1.65 in 3.01s (4 hosts left)
+Completed SYN Stealth Scan against 10.0.1.70 in 3.01s (3 hosts left)
+Completed SYN Stealth Scan against 10.0.1.100 in 3.01s (2 hosts left)
+Completed SYN Stealth Scan against 10.0.1.103 in 3.01s (1 host left)
+Completed SYN Stealth Scan at 15:55, 4.46s elapsed (11000 total ports)
+Initiating OS detection (try #1) against 11 hosts
+Retrying OS detection (try #2) against 10 hosts
+Retrying OS detection (try #3) against 9 hosts
+Retrying OS detection (try #4) against 9 hosts
+Retrying OS detection (try #5) against 9 hosts
+Nmap scan report for 10.0.1.2
+Host is up (0.0060s latency).
+Not shown: 997 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+80/tcp  open  http
+443/tcp open  https
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.01%E=4%D=12/4%OT=22%CT=1%CU=30705%PV=Y%DS=1%DC=I%G=Y%TM=58442E6
+OS:1%P=x86_64-pc-linux-gnu)SEQ(SP=105%GCD=1%ISR=10C%TI=Z%CI=I%II=I%TS=8)OPS
+OS:(O1=M558ST11NW4%O2=M558ST11NW4%O3=M558NNT11NW4%O4=M558ST11NW4%O5=M558ST1
+OS:1NW4%O6=M558ST11)WIN(W1=3890%W2=3890%W3=3890%W4=3890%W5=3890%W6=3890)ECN
+OS:(R=Y%DF=Y%T=40%W=3908%O=M558NNSNW4%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=A
+OS:S%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R
+OS:=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F
+OS:=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%
+OS:T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD
+OS:=S)
+
+Uptime guess: 154.749 days (since Sat Jul  2 22:56:56 2016)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=261 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+Nmap scan report for 10.0.1.30
+Host is up (0.0063s latency).
+Not shown: 992 filtered ports
+PORT    STATE  SERVICE
+20/tcp  closed ftp-data
+21/tcp  open   ftp
+22/tcp  open   ssh
+25/tcp  open   smtp
+80/tcp  open   http
+110/tcp open   pop3
+143/tcp open   imap
+443/tcp closed https
+Aggressive OS guesses: OpenWrt White Russian 0.9 (Linux 2.4.30) (94%), Dell Chassis Management Controller (CMC) (93%), D-Link DIR-300 NRU router (Linux 2.6.21) (93%), Linux 2.6.18 - 2.6.27 (93%), Linux 2.6.8 - 2.6.30 (93%), Linux 2.6.16 - 2.6.20 (93%), Linux 2.6.18-8.el5 (Red Hat Enterprise Linux 5) (93%), Linux 2.6.20 (Ubuntu, x86_64) (93%), Linux 2.6.21 (93%), Linux 2.6.23 (93%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 19.540 days (since Tue Nov 15 02:57:19 2016)
+TCP Sequence Prediction: Difficulty=204 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+Nmap scan report for 10.0.1.35
+Host is up (0.0062s latency).
+Not shown: 996 closed ports
+PORT    STATE SERVICE
+21/tcp  open  ftp
+22/tcp  open  ssh
+80/tcp  open  http
+631/tcp open  ipp
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.01%E=4%D=12/4%OT=21%CT=1%CU=35209%PV=Y%DS=2%DC=I%G=Y%TM=58442E6
+OS:1%P=x86_64-pc-linux-gnu)SEQ(SP=C5%GCD=1%ISR=D1%TI=Z%CI=Z%II=I%TS=8)OPS(O
+OS:1=M558ST11NW2%O2=M558ST11NW2%O3=M558NNT11NW2%O4=M558ST11NW2%O5=M558ST11N
+OS:W2%O6=M558ST11)WIN(W1=16A0%W2=16A0%W3=16A0%W4=16A0%W5=16A0%W6=16A0)ECN(R
+OS:=Y%DF=Y%T=40%W=16D0%O=M558NNSNW2%CC=N%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%
+OS:RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y
+OS:%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R
+OS:%O=%RD=0%Q=)T7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RU
+OS:CK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 166.892 days (since Mon Jun 20 19:31:19 2016)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=197 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+Nmap scan report for 10.0.1.41
+Host is up (0.0062s latency).
+Not shown: 996 closed ports
+PORT      STATE SERVICE
+21/tcp    open  ftp
+22/tcp    open  ssh
+631/tcp   open  ipp
+13782/tcp open  netbackup
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.01%E=4%D=12/4%OT=21%CT=1%CU=36138%PV=Y%DS=2%DC=I%G=Y%TM=58442E6
+OS:1%P=x86_64-pc-linux-gnu)SEQ(SP=B8%GCD=1%ISR=B7%TI=Z%CI=Z%II=I%TS=8)OPS(O
+OS:1=M558ST11NW2%O2=M558ST11NW2%O3=M558NNT11NW2%O4=M558ST11NW2%O5=M558ST11N
+OS:W2%O6=M558ST11)WIN(W1=16A0%W2=16A0%W3=16A0%W4=16A0%W5=16A0%W6=16A0)ECN(R
+OS:=Y%DF=Y%T=40%W=16D0%O=M558NNSNW2%CC=N%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%
+OS:RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y
+OS:%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R
+OS:%O=%RD=0%Q=)T7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RU
+OS:CK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 73.265 days (since Thu Sep 22 10:34:19 2016)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=183 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+Nmap scan report for 10.0.1.50
+Host is up (0.0062s latency).
+Not shown: 995 closed ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+53/tcp   open  domain
+111/tcp  open  rpcbind
+2121/tcp open  ccproxy-ftp
+6667/tcp open  irc
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.01%E=4%D=12/4%OT=22%CT=1%CU=42360%PV=Y%DS=2%DC=I%G=Y%TM=58442E6
+OS:1%P=x86_64-pc-linux-gnu)SEQ(SP=C7%GCD=1%ISR=CC%TI=Z%CI=Z%II=I%TS=7)OPS(O
+OS:1=M558ST11NW6%O2=M558ST11NW6%O3=M558NNT11NW6%O4=M558ST11NW6%O5=M558ST11N
+OS:W6%O6=M558ST11)WIN(W1=16A0%W2=16A0%W3=16A0%W4=16A0%W5=16A0%W6=16A0)ECN(R
+OS:=Y%DF=Y%T=40%W=16D0%O=M558NNSNW6%CC=N%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%
+OS:RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y
+OS:%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R
+OS:%O=%RD=0%Q=)T7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RU
+OS:CK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 360.225 days (since Thu Dec 10 10:31:25 2015)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=199 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+Nmap scan report for 10.0.1.55
+Host is up (0.0062s latency).
+Not shown: 999 closed ports
+PORT     STATE SERVICE
+2121/tcp open  ccproxy-ftp
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.01%E=4%D=12/4%OT=2121%CT=1%CU=32177%PV=Y%DS=2%DC=I%G=Y%TM=58442
+OS:E61%P=x86_64-pc-linux-gnu)SEQ(SP=C3%GCD=1%ISR=CA%TI=Z%CI=Z%II=I%TS=7)OPS
+OS:(O1=M558ST11NW6%O2=M558ST11NW6%O3=M558NNT11NW6%O4=M558ST11NW6%O5=M558ST1
+OS:1NW6%O6=M558ST11)WIN(W1=16A0%W2=16A0%W3=16A0%W4=16A0%W5=16A0%W6=16A0)ECN
+OS:(R=Y%DF=Y%T=40%W=16D0%O=M558NNSNW6%CC=N%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=A
+OS:S%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R
+OS:=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F
+OS:=R%O=%RD=0%Q=)T7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%
+OS:RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 139.078 days (since Mon Jul 18 15:03:00 2016)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=195 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+Nmap scan report for 10.0.1.60
+Host is up (0.0060s latency).
+Not shown: 997 closed ports
+PORT     STATE SERVICE
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+1099/tcp open  rmiregistry
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.01%E=4%D=12/4%OT=139%CT=1%CU=40948%PV=Y%DS=2%DC=I%G=Y%TM=58442E
+OS:61%P=x86_64-pc-linux-gnu)SEQ(SP=CB%GCD=1%ISR=CD%TI=Z%CI=Z%II=I%TS=7)OPS(
+OS:O1=M558ST11NW6%O2=M558ST11NW6%O3=M558NNT11NW6%O4=M558ST11NW6%O5=M558ST11
+OS:NW6%O6=M558ST11)WIN(W1=16A0%W2=16A0%W3=16A0%W4=16A0%W5=16A0%W6=16A0)ECN(
+OS:R=Y%DF=Y%T=40%W=16D0%O=M558NNSNW6%CC=N%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS
+OS:%RD=0%Q=)T2(R=N)T3(R=Y%DF=Y%T=40%W=16A0%S=O%A=S+%F=AS%O=M558ST11NW6%RD=0
+OS:%Q=)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z
+OS:%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y
+OS:%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RI
+OS:PL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 355.154 days (since Tue Dec 15 12:13:24 2015)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=203 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+Nmap scan report for 10.0.1.65
+Host is up (0.0088s latency).
+Not shown: 991 closed ports
+PORT      STATE SERVICE
+135/tcp   open  msrpc
+139/tcp   open  netbios-ssn
+445/tcp   open  microsoft-ds
+49152/tcp open  unknown
+49153/tcp open  unknown
+49154/tcp open  unknown
+49155/tcp open  unknown
+49156/tcp open  unknown
+49157/tcp open  unknown
+Device type: general purpose
+Running: Microsoft Windows 8.1
+OS CPE: cpe:/o:microsoft:windows_8.1
+OS details: Microsoft Windows 8.1
+Uptime guess: 359.984 days (since Thu Dec 10 16:18:20 2015)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=261 (Good luck!)
+IP ID Sequence Generation: Incremental
+
+Nmap scan report for 10.0.1.70
+Host is up (0.0064s latency).
+Not shown: 995 closed ports
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+1025/tcp open  NFS-or-IIS
+1027/tcp open  IIS
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.01%E=4%D=12/4%OT=135%CT=1%CU=43288%PV=Y%DS=2%DC=I%G=Y%TM=58442E
+OS:61%P=x86_64-pc-linux-gnu)SEQ(SP=106%GCD=1%ISR=10A%TI=I%CI=I%TS=0)OPS(O1=
+OS:M558NW0NNT00NNS%O2=M558NW0NNT00NNS%O3=M558NW0NNT00%O4=M558NW0NNT00NNS%O5
+OS:=M558NW0NNT00NNS%O6=M558NNT00NNS)WIN(W1=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=
+OS:FFFF%W6=FFFF)ECN(R=Y%DF=Y%T=80%W=FFFF%O=M558NW0NNS%CC=N%Q=)T1(R=Y%DF=Y%T
+OS:=80%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=N%T=80%W=0%S=A%A=O%F=R
+OS:%O=%RD=0%Q=)T5(R=Y%DF=N%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=N%T=
+OS:80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)T7(R=N)U1(R=Y%DF=N%T=80%IPL=B0%UN=0%RIPL=G
+OS:%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=N)
+
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=262 (Good luck!)
+IP ID Sequence Generation: Incremental
+
+Nmap scan report for 10.0.1.100
+Host is up (0.0061s latency).
+Not shown: 994 closed ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+80/tcp   open  http
+111/tcp  open  rpcbind
+443/tcp  open  https
+631/tcp  open  ipp
+3306/tcp open  mysql
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.01%E=4%D=12/4%OT=22%CT=1%CU=41162%PV=Y%DS=2%DC=I%G=Y%TM=58442E6
+OS:1%P=x86_64-pc-linux-gnu)SEQ(SP=C5%GCD=1%ISR=CB%TI=Z%CI=Z%II=I%TS=A)OPS(O
+OS:1=M558ST11NW2%O2=M558ST11NW2%O3=M558NNT11NW2%O4=M558ST11NW2%O5=M558ST11N
+OS:W2%O6=M558ST11)WIN(W1=16A0%W2=16A0%W3=16A0%W4=16A0%W5=16A0%W6=16A0)ECN(R
+OS:=Y%DF=Y%T=40%W=16D0%O=M558NNSNW2%CC=N%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%
+OS:RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y
+OS:%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R
+OS:%O=%RD=0%Q=)T7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RU
+OS:CK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 6.940 days (since Sun Nov 27 17:21:55 2016)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=197 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+Nmap scan report for 10.0.1.103
+Host is up (0.0062s latency).
+Not shown: 997 closed ports
+PORT     STATE SERVICE
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+2121/tcp open  ccproxy-ftp
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.01%E=4%D=12/4%OT=139%CT=1%CU=34128%PV=Y%DS=2%DC=I%G=Y%TM=58442E
+OS:61%P=x86_64-pc-linux-gnu)SEQ(SP=CA%GCD=1%ISR=CE%TI=Z%CI=Z%II=I%TS=7)OPS(
+OS:O1=M558ST11NW6%O2=M558ST11NW6%O3=M558NNT11NW6%O4=M558ST11NW6%O5=M558ST11
+OS:NW6%O6=M558ST11)WIN(W1=16A0%W2=16A0%W3=16A0%W4=16A0%W5=16A0%W6=16A0)ECN(
+OS:R=Y%DF=Y%T=40%W=16D0%O=M558NNSNW6%CC=N%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS
+OS:%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=
+OS:Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=
+OS:R%O=%RD=0%Q=)T7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%R
+OS:UCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 355.132 days (since Tue Dec 15 12:45:09 2015)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=202 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+Read data files from: /usr/bin/../share/nmap
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 256 IP addresses (11 hosts up) scanned in 104.62 seconds
+           Raw packets sent: 14777 (684.376KB) | Rcvd: 11972 (541.948KB)
