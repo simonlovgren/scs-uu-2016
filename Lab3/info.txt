@@ -1,0 +1,85 @@
+Module options (auxiliary/scanner/netbios/nbname):
+
+   Name       Current Setting  Required  Description
+   ----       ---------------  --------  -----------
+   BATCHSIZE  256              yes       The number of hosts to probe in each set
+   RHOSTS                      yes       The target address range or CIDR identifier
+   RPORT      137              yes       The target port
+   THREADS    10               yes       The number of concurrent threads
+
+[*] 10.0.1.70 [IT-LWY1S4Q3IS3C] OS:Windows Names:(IT-LWY1S4Q3IS3C, WORKGROUP) Addresses:(10.0.1.70) Mac:00:0c:29:0f:1f:fa Virtual Machine:VMWare
+
+============================================
+FROM ABOVE
+
+10.0.1.70 [IT-LWY1S4Q3IS3C]
+OS:                    Windows
+Names:                 (IT-LWY1S4Q3IS3C, WORKGROUP)
+Addresses:             (10.0.1.70)
+Mac:                   00:0c:29:0f:1f:fa
+Virtual Machine:       VMWare
+
+============================================
+
+
+EXTENSIVE NMAP
+============================================
+
+
+Starting Nmap 7.01 ( https://nmap.org ) at 2016-12-07 16:10 CET
+NSE: Loaded 35 scripts for scanning.
+Initiating Ping Scan at 16:10
+Scanning 10.0.1.70 [4 ports]
+Completed Ping Scan at 16:10, 0.04s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 16:10
+Completed Parallel DNS resolution of 1 host. at 16:10, 0.00s elapsed
+DNS resolution of 1 IPs took 0.00s. Mode: Async [#: 2, OK: 0, NX: 1, DR: 0, SF: 0, TR: 1, CN: 0]
+Initiating SYN Stealth Scan at 16:10
+Scanning 10.0.1.70 [1000 ports]
+Discovered open port 139/tcp on 10.0.1.70
+Discovered open port 1027/tcp on 10.0.1.70
+Discovered open port 1048/tcp on 10.0.1.70
+Completed SYN Stealth Scan at 16:10, 0.23s elapsed (1000 total ports)
+Initiating Service scan at 16:10
+Scanning 3 services on 10.0.1.70
+Completed Service scan at 16:11, 53.61s elapsed (3 services on 1 host)
+Initiating OS detection (try #1) against 10.0.1.70
+Retrying OS detection (try #2) against 10.0.1.70
+Retrying OS detection (try #3) against 10.0.1.70
+Retrying OS detection (try #4) against 10.0.1.70
+Retrying OS detection (try #5) against 10.0.1.70
+NSE: Script scanning 10.0.1.70.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 16:11
+Completed NSE at 16:11, 0.38s elapsed
+Nmap scan report for 10.0.1.70
+Host is up, received echo-reply ttl 127 (0.0028s latency).
+Scanned at 2016-12-07 16:10:13 CET for 66s
+Not shown: 997 closed ports
+Reason: 997 resets
+PORT     STATE SERVICE     REASON          VERSION
+139/tcp  open  netbios-ssn syn-ack ttl 127 Microsoft Windows 98 netbios-ssn
+1027/tcp open  msrpc       syn-ack ttl 127 Microsoft Windows RPC
+1048/tcp open  msrpc       syn-ack ttl 127 Microsoft Windows RPC
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.01%E=4%D=12/7%OT=139%CT=1%CU=42427%PV=Y%DS=2%DC=I%G=Y%TM=584826
+OS:97%P=x86_64-pc-linux-gnu)SEQ(SP=108%GCD=1%ISR=10A%TI=I%CI=I%TS=0)OPS(O1=
+OS:M558NW0NNT00NNS%O2=M558NW0NNT00NNS%O3=M558NW0NNT00%O4=M558NW0NNT00NNS%O5
+OS:=M558NW0NNT00NNS%O6=M558NNT00NNS)WIN(W1=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=
+OS:FFFF%W6=FFFF)ECN(R=Y%DF=Y%T=80%W=FFFF%O=M558NW0NNS%CC=N%Q=)T1(R=Y%DF=Y%T
+OS:=80%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=N%T=80%W=0%S=A%A=O%F=R
+OS:%O=%RD=0%Q=)T5(R=Y%DF=N%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=N%T=
+OS:80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)T7(R=N)U1(R=Y%DF=N%T=80%IPL=B0%UN=0%RIPL=G
+OS:%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=N)
+
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=264 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: OSs: Windows 98, Windows; CPE: cpe:/o:microsoft:windows_98, cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 67.11 seconds
+           Raw packets sent: 1144 (56.162KB) | Rcvd: 1061 (44.550KB)
+

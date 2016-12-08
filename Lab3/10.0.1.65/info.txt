@@ -1,0 +1,9 @@
+
+[*] 10.0.1.65 [WIN-GFVE5DMUKE5] OS:Windows Names:(WIN-GFVE5DMUKE5, WORKGROUP) Addresses:(10.0.1.65) Mac:00:0c:29:9b:e6:18 Virtual Machine:VMWare
+
+10.0.1.65 [WIN-GFVE5DMUKE5]
+OS:Windows
+Names:(WIN-GFVE5DMUKE5, WORKGROUP)
+Addresses:(10.0.1.65)
+Mac:00:0c:29:9b:e6:18
+Virtual Machine:VMWare
