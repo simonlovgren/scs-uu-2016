@@ -1,0 +1,231 @@
+
+Starting Nmap 7.01 ( https://nmap.org ) at 2016-12-07 09:45 CET
+Nmap scan report for 10.0.1.30
+Host is up (0.0042s latency).
+Not shown: 992 filtered ports
+PORT    STATE  SERVICE  VERSION
+20/tcp  closed ftp-data
+21/tcp  open   ftp      vsftpd (broken: could not bind listening IPv4 socket)
+22/tcp  open   ssh      OpenSSH 4.3 (protocol 1.99)
+25/tcp  open   smtp     Sendmail 8.13.7/8.13.7
+80/tcp  open   http     Apache httpd 2.0.55 ((Unix) PHP/5.1.2)
+110/tcp open   pop3     Openwall popa3d
+143/tcp open   imap     UW imapd 2004.357
+443/tcp closed https
+Aggressive OS guesses: OpenWrt White Russian 0.9 (Linux 2.4.30) (94%), Dell Chassis Management Controller (CMC) (93%), Linux 2.6.18 (93%), Linux 2.6.18 - 2.6.27 (93%), Linux 2.6.8 - 2.6.30 (93%), Linux 2.6.18-8.el5 (Red Hat Enterprise Linux 5) (93%), Linux 2.6.21 (93%), Linux 2.6.27 (Ubuntu 8.10) (93%), OpenWrt 0.9 - 7.09 (Linux 2.4.30 - 2.4.34) (92%), OpenWrt Kamikaze 7.09 (Linux 2.6.22) (92%)
+No exact OS matches for host (test conditions non-ideal).
+Service Info: Host: slax.example.net; OS: Unix
+
+Nmap scan report for 10.0.1.35
+Host is up (0.0044s latency).
+Not shown: 996 closed ports
+PORT    STATE SERVICE    VERSION
+21/tcp  open  ftp        vsftpd 2.0.4
+22/tcp  open  tcpwrapped
+80/tcp  open  http       Apache httpd 2.2.4 ((Unix) mod_ssl/2.2.4 OpenSSL/0.9.8b DAV/2)
+631/tcp open  ipp        CUPS 1.1
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.01%E=4%D=12/7%OT=21%CT=1%CU=40289%PV=Y%DS=2%DC=I%G=Y%TM=5847CCA
+OS:5%P=x86_64-pc-linux-gnu)SEQ(SP=C9%GCD=1%ISR=CF%TI=Z%CI=Z%II=I%TS=8)OPS(O
+OS:1=M558ST11NW2%O2=M558ST11NW2%O3=M558NNT11NW2%O4=M558ST11NW2%O5=M558ST11N
+OS:W2%O6=M558ST11)WIN(W1=16A0%W2=16A0%W3=16A0%W4=16A0%W5=16A0%W6=16A0)ECN(R
+OS:=Y%DF=Y%T=40%W=16D0%O=M558NNSNW2%CC=N%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%
+OS:RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y
+OS:%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R
+OS:%O=%RD=0%Q=)T7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RU
+OS:CK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 2 hops
+Service Info: OS: Unix
+
+Nmap scan report for 10.0.1.41
+Host is up (0.0046s latency).
+Not shown: 996 closed ports
+PORT      STATE SERVICE    VERSION
+21/tcp    open  ftp        vsftpd 2.0.4
+22/tcp    open  ssh        OpenSSH 4.3 (protocol 1.99)
+631/tcp   open  ipp        CUPS 1.1
+13782/tcp open  netbackup?
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.01%E=4%D=12/7%OT=21%CT=1%CU=42377%PV=Y%DS=2%DC=I%G=Y%TM=5847CCA
+OS:5%P=x86_64-pc-linux-gnu)SEQ(SP=C7%GCD=1%ISR=CE%TI=Z%CI=Z%II=I%TS=8)OPS(O
+OS:1=M558ST11NW2%O2=M558ST11NW2%O3=M558NNT11NW2%O4=M558ST11NW2%O5=M558ST11N
+OS:W2%O6=M558ST11)WIN(W1=16A0%W2=16A0%W3=16A0%W4=16A0%W5=16A0%W6=16A0)ECN(R
+OS:=Y%DF=Y%T=40%W=16D0%O=M558NNSNW2%CC=N%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%
+OS:RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y
+OS:%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R
+OS:%O=%RD=0%Q=)T7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RU
+OS:CK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 2 hops
+Service Info: OS: Unix
+
+Nmap scan report for 10.0.1.50
+Host is up (0.0046s latency).
+Not shown: 993 closed ports
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0)
+53/tcp   open  domain  ISC BIND 9.4.2
+80/tcp   open  http    Apache httpd 2.2.8 ((Ubuntu) DAV/2)
+111/tcp  open  rpcbind 2 (RPC #100000)
+2121/tcp open  ftp     ProFTPD 1.3.1
+4444/tcp open  krb524?
+6667/tcp open  irc     Unreal ircd
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.01%E=4%D=12/7%OT=22%CT=1%CU=30890%PV=Y%DS=2%DC=I%G=Y%TM=5847CCA
+OS:5%P=x86_64-pc-linux-gnu)SEQ(SP=C2%GCD=1%ISR=C7%TI=Z%CI=Z%II=I%TS=7)OPS(O
+OS:1=M558ST11NW6%O2=M558ST11NW6%O3=M558NNT11NW6%O4=M558ST11NW6%O5=M558ST11N
+OS:W6%O6=M558ST11)WIN(W1=16A0%W2=16A0%W3=16A0%W4=16A0%W5=16A0%W6=16A0)ECN(R
+OS:=Y%DF=Y%T=40%W=16D0%O=M558NNSNW6%CC=N%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%
+OS:RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y
+OS:%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R
+OS:%O=%RD=0%Q=)T7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RU
+OS:CK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 2 hops
+Service Info: Host: irc.server.LAN; OSs: Linux, Unix; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 10.0.1.55
+Host is up (0.0047s latency).
+Not shown: 999 closed ports
+PORT     STATE SERVICE VERSION
+2121/tcp open  ftp     ProFTPD 1.3.1
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.01%E=4%D=12/7%OT=2121%CT=1%CU=39109%PV=Y%DS=2%DC=I%G=Y%TM=5847C
+OS:CA5%P=x86_64-pc-linux-gnu)SEQ(SP=CE%GCD=1%ISR=CD%TI=Z%CI=Z%II=I%TS=7)OPS
+OS:(O1=M558ST11NW6%O2=M558ST11NW6%O3=M558NNT11NW6%O4=M558ST11NW6%O5=M558ST1
+OS:1NW6%O6=M558ST11)WIN(W1=16A0%W2=16A0%W3=16A0%W4=16A0%W5=16A0%W6=16A0)ECN
+OS:(R=Y%DF=Y%T=40%W=16D0%O=M558NNSNW6%CC=N%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=A
+OS:S%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R
+OS:=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F
+OS:=R%O=%RD=0%Q=)T7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%
+OS:RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 2 hops
+Service Info: OS: Unix
+
+Nmap scan report for 10.0.1.60
+Host is up (0.0046s latency).
+Not shown: 997 closed ports
+PORT     STATE SERVICE     VERSION
+139/tcp  open  netbios-ssn Samba smbd 3.X (workgroup: WORKGROUP)
+445/tcp  open  netbios-ssn Samba smbd 3.X (workgroup: WORKGROUP)
+1099/tcp open  rmiregistry GNU Classpath grmiregistry
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.01%E=4%D=12/7%OT=139%CT=1%CU=44097%PV=Y%DS=2%DC=I%G=Y%TM=5847CC
+OS:A5%P=x86_64-pc-linux-gnu)SEQ(SP=C8%GCD=1%ISR=CB%TI=Z%CI=Z%II=I%TS=7)OPS(
+OS:O1=M558ST11NW6%O2=M558ST11NW6%O3=M558NNT11NW6%O4=M558ST11NW6%O5=M558ST11
+OS:NW6%O6=M558ST11)WIN(W1=16A0%W2=16A0%W3=16A0%W4=16A0%W5=16A0%W6=16A0)ECN(
+OS:R=Y%DF=Y%T=40%W=16D0%O=M558NNSNW6%CC=N%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS
+OS:%RD=0%Q=)T2(R=N)T3(R=Y%DF=Y%T=40%W=16A0%S=O%A=S+%F=AS%O=M558ST11NW6%RD=0
+OS:%Q=)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z
+OS:%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y
+OS:%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RI
+OS:PL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 2 hops
+Service Info: Host: localhost
+
+Nmap scan report for 10.0.1.65
+Host is up (0.0046s latency).
+Not shown: 991 closed ports
+PORT      STATE SERVICE      VERSION
+135/tcp   open  msrpc        Microsoft Windows RPC
+139/tcp   open  netbios-ssn  Microsoft Windows 98 netbios-ssn
+445/tcp   open  microsoft-ds Microsoft Windows Server 2008 R2 microsoft-ds
+49152/tcp open  msrpc        Microsoft Windows RPC
+49153/tcp open  msrpc        Microsoft Windows RPC
+49154/tcp open  msrpc        Microsoft Windows RPC
+49155/tcp open  msrpc        Microsoft Windows RPC
+49156/tcp open  msrpc        Microsoft Windows RPC
+49157/tcp open  msrpc        Microsoft Windows RPC
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.01%E=4%D=12/7%OT=135%CT=1%CU=31008%PV=Y%DS=2%DC=I%G=Y%TM=5847CC
+OS:A5%P=x86_64-pc-linux-gnu)SEQ(SP=101%GCD=1%ISR=103%TI=I%CI=I%TS=7)OPS(O1=
+OS:M558NW8ST11%O2=M558NW8ST11%O3=M558NW8NNT11%O4=M558NW8ST11%O5=M558NW8ST11
+OS:%O6=M558ST11)WIN(W1=2000%W2=2000%W3=2000%W4=2000%W5=2000%W6=2000)ECN(R=Y
+OS:%DF=Y%T=80%W=2000%O=M558NW8NNS%CC=N%Q=)T1(R=Y%DF=Y%T=80%S=O%A=S+%F=AS%RD
+OS:=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)T5(R=Y%D
+OS:F=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O
+OS:=%RD=0%Q=)T7(R=N)U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK
+OS:=G%RUD=G)IE(R=N)
+
+Network Distance: 2 hops
+Service Info: OSs: Windows, Windows 98, Windows Server 2008 R2; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_98, cpe:/o:microsoft:windows_server_2008:r2
+
+Nmap scan report for 10.0.1.70
+Host is up (0.0047s latency).
+Not shown: 997 closed ports
+PORT     STATE SERVICE     VERSION
+139/tcp  open  netbios-ssn Microsoft Windows 98 netbios-ssn
+1027/tcp open  msrpc       Microsoft Windows RPC
+1031/tcp open  msrpc       Microsoft Windows RPC
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.01%E=4%D=12/7%OT=139%CT=1%CU=39182%PV=Y%DS=2%DC=I%G=Y%TM=5847CC
+OS:A5%P=x86_64-pc-linux-gnu)SEQ(SP=105%GCD=1%ISR=10B%TI=I%CI=I%TS=0)OPS(O1=
+OS:M558NW0NNT00NNS%O2=M558NW0NNT00NNS%O3=M558NW0NNT00%O4=M558NW0NNT00NNS%O5
+OS:=M558NW0NNT00NNS%O6=M558NNT00NNS)WIN(W1=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=
+OS:FFFF%W6=FFFF)ECN(R=Y%DF=Y%T=80%W=FFFF%O=M558NW0NNS%CC=N%Q=)T1(R=Y%DF=Y%T
+OS:=80%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=N%T=80%W=0%S=A%A=O%F=R
+OS:%O=%RD=0%Q=)T5(R=Y%DF=N%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=N%T=
+OS:80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)T7(R=N)U1(R=Y%DF=N%T=80%IPL=B0%UN=0%RIPL=G
+OS:%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=N)
+
+Network Distance: 2 hops
+Service Info: OSs: Windows 98, Windows; CPE: cpe:/o:microsoft:windows_98, cpe:/o:microsoft:windows
+
+Nmap scan report for 10.0.1.100
+Host is up (0.0034s latency).
+Not shown: 994 closed ports
+PORT     STATE SERVICE  VERSION
+22/tcp   open  ssh      OpenSSH 3.9p1 (protocol 1.99)
+80/tcp   open  http     Apache httpd 2.0.52 ((CentOS))
+111/tcp  open  rpcbind  2 (RPC #100000)
+443/tcp  open  ssl/http Apache httpd 2.0.52 ((CentOS))
+631/tcp  open  ipp      CUPS 1.1
+3306/tcp open  mysql    MySQL (unauthorized)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.01%E=4%D=12/7%OT=22%CT=1%CU=33207%PV=Y%DS=2%DC=I%G=Y%TM=5847CCA
+OS:5%P=x86_64-pc-linux-gnu)SEQ(SP=C9%GCD=1%ISR=D2%TI=Z%CI=Z%II=I%TS=A)OPS(O
+OS:1=M558ST11NW2%O2=M558ST11NW2%O3=M558NNT11NW2%O4=M558ST11NW2%O5=M558ST11N
+OS:W2%O6=M558ST11)WIN(W1=16A0%W2=16A0%W3=16A0%W4=16A0%W5=16A0%W6=16A0)ECN(R
+OS:=Y%DF=Y%T=40%W=16D0%O=M558NNSNW2%CC=N%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%
+OS:RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y
+OS:%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R
+OS:%O=%RD=0%Q=)T7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RU
+OS:CK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 2 hops
+
+Nmap scan report for 10.0.1.103
+Host is up (0.0042s latency).
+Not shown: 997 closed ports
+PORT     STATE SERVICE     VERSION
+139/tcp  open  netbios-ssn Samba smbd 3.X (workgroup: WORKGROUP)
+445/tcp  open  netbios-ssn Samba smbd 3.X (workgroup: WORKGROUP)
+2121/tcp open  ftp         ProFTPD 1.3.1
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.01%E=4%D=12/7%OT=139%CT=1%CU=31973%PV=Y%DS=2%DC=I%G=Y%TM=5847CC
+OS:A5%P=x86_64-pc-linux-gnu)SEQ(SP=C7%GCD=1%ISR=CB%TI=Z%CI=Z%II=I%TS=7)OPS(
+OS:O1=M558ST11NW6%O2=M558ST11NW6%O3=M558NNT11NW6%O4=M558ST11NW6%O5=M558ST11
+OS:NW6%O6=M558ST11)WIN(W1=16A0%W2=16A0%W3=16A0%W4=16A0%W5=16A0%W6=16A0)ECN(
+OS:R=Y%DF=Y%T=40%W=16D0%O=M558NNSNW6%CC=N%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS
+OS:%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=
+OS:Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=
+OS:R%O=%RD=0%Q=)T7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%R
+OS:UCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 2 hops
+Service Info: OS: Unix
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 253 IP addresses (10 hosts up) scanned in 137.34 seconds
